@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>debugger知识总结 | 技术研究</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/img/logo.jpeg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.26f35423.css" as="style"><link rel="preload" href="/assets/js/app.a9cac676.js" as="script"><link rel="preload" href="/assets/js/5.16132da4.js" as="script"><link rel="preload" href="/assets/js/1.ad84ba3d.js" as="script"><link rel="preload" href="/assets/js/30.e8d07abf.js" as="script"><link rel="preload" href="/assets/js/54.195838f4.js" as="script"><link rel="prefetch" href="/assets/js/10.5cea7d44.js"><link rel="prefetch" href="/assets/js/11.73d50b56.js"><link rel="prefetch" href="/assets/js/12.04d69aa9.js"><link rel="prefetch" href="/assets/js/13.704de73f.js"><link rel="prefetch" href="/assets/js/14.c1083114.js"><link rel="prefetch" href="/assets/js/15.17af6143.js"><link rel="prefetch" href="/assets/js/16.e7dd9a5b.js"><link rel="prefetch" href="/assets/js/17.11cf0530.js"><link rel="prefetch" href="/assets/js/18.d7b19b90.js"><link rel="prefetch" href="/assets/js/19.47575e85.js"><link rel="prefetch" href="/assets/js/20.4009a11c.js"><link rel="prefetch" href="/assets/js/21.2f887fcf.js"><link rel="prefetch" href="/assets/js/22.307d3c5e.js"><link rel="prefetch" href="/assets/js/23.5ccb9259.js"><link rel="prefetch" href="/assets/js/24.4946e399.js"><link rel="prefetch" href="/assets/js/25.ff697ec6.js"><link rel="prefetch" href="/assets/js/26.559af2ee.js"><link rel="prefetch" href="/assets/js/27.3a290674.js"><link rel="prefetch" href="/assets/js/28.828f4dd6.js"><link rel="prefetch" href="/assets/js/29.5cedb3c3.js"><link rel="prefetch" href="/assets/js/31.6db7bdc4.js"><link rel="prefetch" href="/assets/js/32.9bd3dab7.js"><link rel="prefetch" href="/assets/js/33.b9bed422.js"><link rel="prefetch" href="/assets/js/34.8c4ef4e2.js"><link rel="prefetch" href="/assets/js/35.cfed6d68.js"><link rel="prefetch" href="/assets/js/36.67695abd.js"><link rel="prefetch" href="/assets/js/37.383d6f5a.js"><link rel="prefetch" href="/assets/js/38.c612a4a3.js"><link rel="prefetch" href="/assets/js/39.5739bbc0.js"><link rel="prefetch" href="/assets/js/4.bab69199.js"><link rel="prefetch" href="/assets/js/40.3e9d4be1.js"><link rel="prefetch" href="/assets/js/41.466c1b69.js"><link rel="prefetch" href="/assets/js/42.0da03c58.js"><link rel="prefetch" href="/assets/js/43.0dfc9817.js"><link rel="prefetch" href="/assets/js/44.50c7c19b.js"><link rel="prefetch" href="/assets/js/45.75ddc72a.js"><link rel="prefetch" href="/assets/js/46.42fe5a76.js"><link rel="prefetch" href="/assets/js/47.ee518bde.js"><link rel="prefetch" href="/assets/js/48.aa76b66d.js"><link rel="prefetch" href="/assets/js/49.61a8038f.js"><link rel="prefetch" href="/assets/js/50.1cc0ea11.js"><link rel="prefetch" href="/assets/js/51.da780b83.js"><link rel="prefetch" href="/assets/js/52.ac2e9839.js"><link rel="prefetch" href="/assets/js/53.746b715d.js"><link rel="prefetch" href="/assets/js/55.17477e6e.js"><link rel="prefetch" href="/assets/js/56.7790ae35.js"><link rel="prefetch" href="/assets/js/57.02e41136.js"><link rel="prefetch" href="/assets/js/58.6045c457.js"><link rel="prefetch" href="/assets/js/59.2cfc9728.js"><link rel="prefetch" href="/assets/js/6.06fb5c1c.js"><link rel="prefetch" href="/assets/js/60.03357dc0.js"><link rel="prefetch" href="/assets/js/61.62acbb0d.js"><link rel="prefetch" href="/assets/js/62.4ab96cc6.js"><link rel="prefetch" href="/assets/js/63.66c24936.js"><link rel="prefetch" href="/assets/js/64.deb96a21.js"><link rel="prefetch" href="/assets/js/65.2a3fe025.js"><link rel="prefetch" href="/assets/js/66.0eeb799b.js"><link rel="prefetch" href="/assets/js/67.a23737d7.js"><link rel="prefetch" href="/assets/js/68.5285b8bd.js"><link rel="prefetch" href="/assets/js/69.a947c62c.js"><link rel="prefetch" href="/assets/js/7.6af48b10.js"><link rel="prefetch" href="/assets/js/70.5b59c98c.js"><link rel="prefetch" href="/assets/js/71.8ddba1b1.js"><link rel="prefetch" href="/assets/js/72.a56e2af5.js"><link rel="prefetch" href="/assets/js/73.fc6e1561.js"><link rel="prefetch" href="/assets/js/74.8738216c.js"><link rel="prefetch" href="/assets/js/75.bfac855d.js"><link rel="prefetch" href="/assets/js/76.09554907.js"><link rel="prefetch" href="/assets/js/77.22028ab5.js"><link rel="prefetch" href="/assets/js/78.95a6cf25.js"><link rel="prefetch" href="/assets/js/79.21dfa375.js"><link rel="prefetch" href="/assets/js/8.896bcff0.js"><link rel="prefetch" href="/assets/js/80.311822ce.js"><link rel="prefetch" href="/assets/js/81.9d76043c.js"><link rel="prefetch" href="/assets/js/82.24946372.js"><link rel="prefetch" href="/assets/js/83.ee858c97.js"><link rel="prefetch" href="/assets/js/84.5e6d52eb.js"><link rel="prefetch" href="/assets/js/85.d90b86bd.js"><link rel="prefetch" href="/assets/js/86.ce2bef13.js"><link rel="prefetch" href="/assets/js/87.dca6f1d4.js"><link rel="prefetch" href="/assets/js/88.f87fe757.js"><link rel="prefetch" href="/assets/js/89.3f8c08b9.js"><link rel="prefetch" href="/assets/js/9.76076671.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.cdea39b0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.26f35423.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.jpeg" alt="技术研究" class="logo"> <span class="site-name can-hide">技术研究</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/timeLine/" class="nav-link">首页</a></div><div class="nav-item"><a href="/technology/" class="nav-link router-link-active">技术</a></div><div class="nav-item"><a href="/life/" class="nav-link">生活</a></div><div class="nav-item"><a href="/bake/" class="nav-link">备忘</a></div><div class="nav-item"><a href="/tags/" class="nav-link">标签库</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/massage/" class="nav-link">留言板</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">链接</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/xccjh/projects" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nextjs.frontendx.cn/docs/#%E5%AE%89%E8%A3%85" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nextjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://zh.nuxtjs.org/guide/installation" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nuxtjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://angularjs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AngularJS
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://reactnative.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ReactNative
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://element-cn.eleme.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ElementUI
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://youzan.github.io/vant/#/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vant
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://www.fontawesome.com.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Fontawesome
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://developers.weixin.qq.com/miniprogram/dev/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MiniProgram
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://reacttraining.com/react-router/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  react-router-dom
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://webpack.js.org/concepts/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  webpack
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.babeljs.cn/docs/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  babel
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://eslint.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  eslint
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.swiper.com.cn/api/index.html/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  swiper
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://momentjs.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  momentjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/linux/linux-shell.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  shell
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://lodash.com/docs/4.17.15#template" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  lodash
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://koa.bootcss.com/#links" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  koa
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://jestjs.io/docs/en/getting-started" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jest
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://aui.github.io/art-template/zh-cn/docs/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  art-template
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ejs.bootcss.com/#docs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ejs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.layui.com/doc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  layui
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://antv-g2.gitee.io/zh/examples/gallery" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  G2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.echartsjs.com/zh/option.html#title" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ECharts
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.vagrantup.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vagrant
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://docs.docker.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  docker
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/technology/ https://www.runoob.com/redis/redis-tutorial.html" class="nav-link">redis</a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/mysql/mysql-tutorial.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  mysql
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  leaflet
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.tslang.cn/docs/home.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  TypeScript
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://docschina.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  印记中文
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav> <div style="margin-left:20px;margin-right:20px;">
+    音乐
+    <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input"><!----><span class="el-switch__core" style="width:40px;"></span><!----></div> <audio><source src="/mp3/065b_520b_0409_111c898908eab454414c3c326fe77c36.mp3" type="audio/mpeg"></audio></div></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/timeLine/" class="nav-link">首页</a></div><div class="nav-item"><a href="/technology/" class="nav-link router-link-active">技术</a></div><div class="nav-item"><a href="/life/" class="nav-link">生活</a></div><div class="nav-item"><a href="/bake/" class="nav-link">备忘</a></div><div class="nav-item"><a href="/tags/" class="nav-link">标签库</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/massage/" class="nav-link">留言板</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">链接</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/xccjh/projects" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nextjs.frontendx.cn/docs/#%E5%AE%89%E8%A3%85" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nextjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://zh.nuxtjs.org/guide/installation" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nuxtjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://angularjs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AngularJS
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://reactnative.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ReactNative
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://element-cn.eleme.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ElementUI
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://youzan.github.io/vant/#/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vant
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://www.fontawesome.com.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Fontawesome
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://developers.weixin.qq.com/miniprogram/dev/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MiniProgram
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://reacttraining.com/react-router/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  react-router-dom
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://webpack.js.org/concepts/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  webpack
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.babeljs.cn/docs/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  babel
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://eslint.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  eslint
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.swiper.com.cn/api/index.html/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  swiper
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://momentjs.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  momentjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/linux/linux-shell.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  shell
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://lodash.com/docs/4.17.15#template" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  lodash
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://koa.bootcss.com/#links" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  koa
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://jestjs.io/docs/en/getting-started" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jest
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://aui.github.io/art-template/zh-cn/docs/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  art-template
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ejs.bootcss.com/#docs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ejs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.layui.com/doc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  layui
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://antv-g2.gitee.io/zh/examples/gallery" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  G2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.echartsjs.com/zh/option.html#title" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ECharts
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.vagrantup.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vagrant
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://docs.docker.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  docker
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/technology/ https://www.runoob.com/redis/redis-tutorial.html" class="nav-link">redis</a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/mysql/mysql-tutorial.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  mysql
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  leaflet
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.tslang.cn/docs/home.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  TypeScript
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://docschina.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  印记中文
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>debugger知识总结</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#断点大致分类" class="sidebar-link">断点大致分类</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#chrome-dev-tools" class="sidebar-link">Chrome Dev Tools</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#找出哪段代码修改了页面" class="sidebar-link">找出哪段代码修改了页面</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#找出谁发送了某个ajax请求" class="sidebar-link">找出谁发送了某个ajax请求</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#在抛出异常时触发断点" class="sidebar-link">在抛出异常时触发断点</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#事件断点" class="sidebar-link">事件断点</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#编程断点" class="sidebar-link">编程断点</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#js-debugger" class="sidebar-link">JS Debugger</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#查看、编辑值" class="sidebar-link">查看、编辑值</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#忽略某个脚本文件" class="sidebar-link">忽略某个脚本文件</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#_1-在编辑器窗口" class="sidebar-link">1.在编辑器窗口</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#_2-在调用栈窗口" class="sidebar-link">2.在调用栈窗口</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#_3-在devtools设置里面" class="sidebar-link">3.在DevTools设置里面</a></li></ul></li><li><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#常用调试代码片" class="sidebar-link">常用调试代码片</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#运行代码片段" class="sidebar-link">运行代码片段</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#给某个函数设置断点" class="sidebar-link">给某个函数设置断点</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#搜索对象的属性" class="sidebar-link">搜索对象的属性</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#访问-设置对象属性触发" class="sidebar-link">访问/设置对象属性触发</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#访问对象属性增加条件" class="sidebar-link">访问对象属性增加条件</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#打印全部全局变量" class="sidebar-link">打印全部全局变量</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#引入jquery" class="sidebar-link">引入jquery</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#source面版css样式更改自动刷新" class="sidebar-link">source面版css样式更改自动刷新</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#页面图片转base64" class="sidebar-link">页面图片转base64</a></li><li class="sidebar-sub-header"><a href="/technology/debugger%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#显示所有元素的边框" class="sidebar-link">显示所有元素的边框</a></li></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content__default"><h2 id="断点大致分类"><a href="#断点大致分类" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  断点大致分类</h2> <table><thead><tr><th style="text-align:center;">断点类型</th> <th style="text-align:center;">使用场景</th></tr></thead> <tbody><tr><td style="text-align:center;">编程断点</td> <td style="text-align:center;">在js文件中，手动输入代码debugger;，当js文件运行时，会在此处暂停</td></tr> <tr><td style="text-align:center;">行断点</td> <td style="text-align:center;">知道代码执行的区域，手动在某一行代码处设置断点</td></tr> <tr><td style="text-align:center;">满足条件的行断点</td> <td style="text-align:center;">知道代码执行的区域，手动在某一行代码处设置断点，但是只在满足某些条件下才会暂停</td></tr> <tr><td style="text-align:center;">DOM断点</td> <td style="text-align:center;">改变、删除一个DOM节点，或者删除这个DOM节点的子元素时设置断点</td></tr> <tr><td style="text-align:center;">XHR断点</td> <td style="text-align:center;">当XHR URL包含某一字符串时设置断点</td></tr> <tr><td style="text-align:center;">事件监听器断点</td> <td style="text-align:center;">触发某些事件时设置断点</td></tr> <tr><td style="text-align:center;">抛出异常断点</td> <td style="text-align:center;">抛出异常时设置断点</td></tr></tbody></table> <h2 id="chrome-dev-tools"><a href="#chrome-dev-tools" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  Chrome Dev Tools</h2> <ol><li><p>首先让我们打开 Chrome Dev Tools 设置一个断点。使用Ctrl+Shift+I 或 Cmd+Option+I ，然后选择一个源代码文件，点击其中行号就可打上断点
+<center><img src="/img/post/20161115181326638" alt=""></center></p></li> <li><p>满足条件的行断点</p> <ul><li>切换到Sources面板</li> <li>打开想要调试的js文件</li> <li>找到代码所在的行</li> <li>这行代码的左侧有一个数字，这个数字代表着这行代码在js文件中所在的行数，右击这个数字</li> <li>选择 Add conditional breakpoint，出现一个输入框
+<center><img src="/img/post/20161115192813395" alt=""></center></li> <li>在输入框中输入条件表达式,在判断条件中你可以使用任何可访问的局部变量</li> <li>按Enter键激活此断点，当条件表达式为真时，DevTools会在这行代码执行之前暂停（条件性行断点的颜色为橙色）
+<center><img src="/img/post/1703175376-58a7f68d4cb58_articlex.png" alt=""></center></li></ul></li></ol> <p>问题是，很多情况下我们完全不知道该把断点打在哪里。比如说调试别人写的代码的时候。接下来让我们看看Chrome Dev Tools 将如何帮助我们解决上述难题</p> <h3 id="找出哪段代码修改了页面"><a href="#找出哪段代码修改了页面" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  找出哪段代码修改了页面</h3> <p>一种常见的情景为：页面的某个部分被修改了，但到底是被哪段代码修改的不是很清楚。通过选中某个HTML元素，右键就可以添加一个断点，它会在该元素被修改时触发：
+<img src="/img/post/20161115182826878" alt="">
+有三种选项可以检测页面的更改：</p> <ul><li>子树更新：只要元素的任一子元素被更改，即触发断点。这是最经常使用的选项。</li> <li>属性更新： 当元素的属性被更改时触发断点。</li> <li>节点移除：当元素从文档移除时触发断点。</li></ul> <h3 id="找出谁发送了某个ajax请求"><a href="#找出谁发送了某个ajax请求" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  找出谁发送了某个ajax请求</h3> <p>有时候我们只知道发送了一个ajax请求，但不清楚是哪段代码干的。在 sources 选项卡下有一个 “XHR breakpoint”面板，可以选中“Any XHR”添加ajax断点，另外，面板头部的点击加号，可以添加条件ajax断点，只有当请求的url包含匹配串时才会触发。
+<center><img src="/img/post/20161115190718961" alt=""></center></p> <ul><li>可以对协议做断点。例如http，https，ws，wss等等。</li> <li>可以对域名做断点。例如github.com，segmentfault.com等等。</li> <li>可以对端口号做断点。例如http://test.foo.com:8080，http://test.bar.com:9090等等。</li> <li>可以对路径做断点。例如http://test.foo.com/bar，http://test.foo.com/bar/baz</li> <li>可以对参数做断点。例如http://test.foo.com/bar;type=baz</li> <li>可以对查询字符串做断点。例如http://test.foo.com/bar?type=...</li> <li>可以对片段做断点。例如http://test.foo.com/bar/#foo</li></ul> <h3 id="在抛出异常时触发断点"><a href="#在抛出异常时触发断点" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  在抛出异常时触发断点</h3> <p>Chrome Dev Tools 允许我们在异常抛出时，使用调试器暂停程序。这项功能可是用 sources 选项卡下的暂停按钮激活。暂停按钮下的复选框用来限制只有当异常未被捕获时，才使用该断点暂停程序,
+<center><img src="/img/post/20161115192103384" alt=""></center></p> <ul><li>点击Pause on exceptions按钮，激活时按钮变成蓝色，在异常抛出时暂停程序</li> <li>勾选Pause On Caught Exceptions表示只在捕获的异常处暂停，未捕获的异常不考虑</li></ul> <h3 id="事件断点"><a href="#事件断点" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  事件断点</h3> <p>除了ajax，所有类型的事件都可以用来触发断点：clicks, double clicks, blur/focus , setTimeout等等。这些断点可以在 source 选项卡下的 Listener Breakpoints 面板里设置：
+<center><img src="/img/post/20161115193604906" alt=""></center></p> <h3 id="编程断点"><a href="#编程断点" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  编程断点</h3> <p>可以简单的添加下面代码来触发断点，当执行到这行时，调试器会被触发，就像是在这行设置了断点一样。这个功能很有用，可以当做是手动设置断点的一种方式。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>debugger;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="js-debugger"><a href="#js-debugger" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  JS Debugger</h3> <ol><li>跳过某个函数（Step over）</li></ol> <p><img src="/img/post/964216789-58a7f83bc7665_articlex.jpg" alt="">
+2. 按照代码实际执行的顺序调试（Step into）</p> <p><img src="/img/post/2083100187-58a7f847ae959_articlex.jpg" alt="">
+3. 跳出某个函数（Step out）</p> <p><img src="/img/post/2538856736-58a7f853d5f46_articlex.jpg" alt="">
+4. 继续执行脚本</p> <p><img src="/img/post/3541234962-58a7f863e924d_articlex.jpg" alt=""></p> <h3 id="查看、编辑值"><a href="#查看、编辑值" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  查看、编辑值</h3> <ol><li>当代码暂停时，可以在Scope窗口查看、编辑某些属性值和变量值，这些属性和变量按照作用域又分属在不同的地方，如局部作用域内、闭包内或者全局作用域内。双击值即可修改。</li></ol> <p><img src="/img/post/748998285-58a7f88a927f3_articlex.jpg" alt=""></p> <ol start="2"><li>查看当前的调用栈</li></ol> <p><img src="/img/post/2619480017-58a7f895cedb3_articlex.jpg" alt=""></p> <ol start="3"><li>使用Watch窗口观察表达式值的变化</li></ol> <ul><li>点击Add Expression按钮添加一个新的表达式去观察</li> <li>点击Refresh按钮刷新当前所有表达式的值。调试的过程中，这些表达式的值是自动变化的</li> <li>把鼠标悬浮在一个表达式上面然后点击Delete watch expression删除一个表达式</li> <li>在Watch窗口右键也可以进行添加、删除表达式操作，也可以ctrl+shift+a添加观察</li></ul> <p><img src="/img/post/4024184894-58a7f8dd7f93c_articlex.jpg" alt=""></p> <ol start="4"><li>编辑脚本文件</li></ol> <ul><li>修复bug的过程中，我们会经常改变某些代码然后查看效果。对于一些小的改动，没必要去在源文件改然后重新加载页面查看效果，我们可以直接在DevTools中修改。</li> <li>在Sources面板打开对应的文件</li> <li>在编辑器窗口直接修改</li> <li>按Command+S(Mac)或者Ctrl+S保存修改，DevTools会重新编译脚本。继续在页面上进行某些操作，比如点击事件，就可以看到修改代码的效果了。</li></ul> <h3 id="忽略某个脚本文件"><a href="#忽略某个脚本文件" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  忽略某个脚本文件</h3> <ul><li>在调试的过程中，经常会碰到第三方的库（如jQuery）或者框架，通常情况下，我们的bug不是由这些库或者框架的代码引起的，但是调试的过程中又不可避免地会进入到这些代码中，不胜其烦。这时，我们可以使用DevTools的黑盒功能，把这些三方脚本文件放到黑盒中，这样，调试的过程中就不会进入到这些脚本中去了，Call Stack窗口也不会显示和这些脚本相关的调用关系。
+把一个js文件放入黑盒有三种方式：</li></ul> <h3 id="_1-在编辑器窗口"><a href="#_1-在编辑器窗口" class="header-anchor">#</a> 1.在编辑器窗口</h3> <ul><li>打开对应的js文件，在编辑器窗口的任意地方右键，选择Blackbox script</li></ul> <p><img src="/img/post/3336566298-58a7f8a64631a_articlex.jpg" alt=""></p> <h3 id="_2-在调用栈窗口"><a href="#_2-在调用栈窗口" class="header-anchor">#</a> 2.在调用栈窗口</h3> <ul><li>在属于这个脚本的某个函数上右键，选择Blackbox script</li></ul> <p><img src="/img/post/4243979566-58a7f8b4e9426_articlex.jpg" alt=""></p> <h3 id="_3-在devtools设置里面"><a href="#_3-在devtools设置里面" class="header-anchor">#</a> 3.在DevTools设置里面</h3> <ul><li>打开设置</li> <li>切换到Blackboxing选项</li> <li>点击Add pattern</li> <li>输入脚本的文件名或者是文件名的正则表达式</li> <li>点击Add</li></ul> <p><img src="/img/post/1852463876-58a7f8c1d755d_articlex.jpg" alt=""></p> <h2 id="常用调试代码片"><a href="#常用调试代码片" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  常用调试代码片</h2> <h3 id="运行代码片段"><a href="#运行代码片段" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  运行代码片段</h3> <p>Chrome Dev Tools 允许开发者保存一个小代码片供未来之用。这个功能在 source 选项卡下的 Snippets 子选项卡里：
+<img src="/img/post/Snipaste_2020-04-15_14-06-00.png" alt=""></p> <ol><li>将这些代码片复制到你的开发者工具中，可以选择一个片段并右击它来运行它。
+<img src="/img/post/vf7elsh4tf.png" alt=""></li> <li>DevTools允许使用以下快捷方式搜索所有脚本、样式表和片段文件,键盘快捷方式也可以方便地执行代码段--只需选择您的代码段，然后使用Ctrl/Cmd+Enter来运行它。</li></ol> <h3 id="给某个函数设置断点"><a href="#给某个函数设置断点" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  给某个函数设置断点</h3> <p>stopBefore.js 代码片允许我们给某个函数设置断点，它会在函数被调用时触发。例如，下面的代码将会在 document.getElementById 函数调用之前触发断点：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// stopBefore(document, 'getElementById')
+// stopBefore('document.getElementById') // the same as the previous
+// stopBefore(Element.prototype, 'removeChild')
+// stopAfter(Element.prototype, 'querySelectorAll')
+// Element.prototype.querySelectorAll.removeBreakpoint()
+(function() {
+	window.stopBefore = function stopBefore(object, methodName) {
+		// stopBefore('Element.prototype.removeChild')
+		if (typeof methodName == 'undefined' &amp;&amp; typeof object == 'string') {
+			var temp = resolvePath(object);
+			object = temp.object;
+			methodName = temp.methodName;
+		}
+		var originalMethod = object[methodName];
+		object[methodName] = function patched() {
+			debugger;
+			var result = originalMethod.apply(this, arguments);
+			return result;
+		};
+		object[methodName].removeBreakpoint = function() {
+			object[methodName] = originalMethod;
+		};
+		object[methodName].__original = originalMethod;
+	};
+	window.stopAfter = function stopAfter(object, methodName) {
+		// stopAfter('jQuery.fn.html')
+		if (typeof methodName == 'undefined') {
+			var temp = resolvePath(object);
+			object = temp.object;
+			methodName = temp.methodName;
+		}
+		var originalMethod = object[methodName];
+		object[methodName] = function patched() {
+			var result = originalMethod.apply(this, arguments);
+			debugger;
+			return result;
+		};
+		object[methodName].removeBreakpoint = function() {
+			object[methodName] = originalMethod;
+		};
+		object[methodName].__original = originalMethod;
+	};
+	function resolvePath(path) {
+		var object = this;
+		var parts = path.split('.');
+		for (var i = 0, ii = parts.length - 1; i &lt; ii; i++) {
+			object = object[parts[i]];
+		}
+		return {
+			object: object,
+			methodName: parts[ii]
+		}
+	}
+})();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br></div></div><h3 id="搜索对象的属性"><a href="#搜索对象的属性" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  搜索对象的属性</h3> <p>grep.js 代码片允许我们在对象及其原型链中搜索拥有匹配条件的属性。例如，下面的语句将会搜索document对象中所有带有get的属性：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//grep(document, 'get');
+Object.prototype.Grep = function( strSearch , isRecursive ) {
+	if ( !strSearch ) {
+		return this;
+	};
+	isRecursive = isRecursive || false;
+	var objToIterate = this,
+		typeOfObject = typeof objToIterate,
+		objKeys = [],
+		objResult = {};
+	if ( typeOfObject === 'object' || typeOfObject === 'function' ) {
+		objKeys = Object.getOwnPropertyNames( objToIterate );
+	};
+	objKeys.forEach( function( item ) {
+		var itemValue;
+		if ( ( strSearch instanceof RegExp ) ? item.match( strSearch ) : item.toLowerCase().indexOf( strSearch.toLowerCase() ) &gt;= 0 ) {
+			itemValue = objToIterate[ item ];
+		}
+		else if ( typeof objToIterate[ item ] === 'object' &amp;&amp; !isRecursive ){
+			itemValue = Grep.call( objToIterate[ item ] , strSearch , true );
+		}
+		if ( itemValue ) {
+			objResult[ item ] = itemValue;
+		}
+	} );
+	return ( Object.getOwnPropertyNames( objResult ).length ) ? objResult : '';
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h3 id="访问-设置对象属性触发"><a href="#访问-设置对象属性触发" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  访问/设置对象属性触发</h3> <p>debugAccess.js 代码片允许我们访问对象某个属性时触发断点。例如，下面的代码将会在每次访问document.cookie 时触发断点。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>debugAccess(document, 'cookie');
+debugAccess(document, 'cookie',true);
+function debugAccess(object, prop, debugGet){
+    var originalProp = getPropertyDescriptor(object, prop);
+    var isSimpleValue = &quot;value&quot; in originalProp; // rather than getter + setter
+    Object.defineProperty(object, prop, {
+        get: function(){
+            if (debugGet) {
+                debugger;
+            }
+            if (isSimpleValue) {
+                return originalProp.value;
+            } else {
+                return originalProp.get.apply(this, arguments);
+            }
+        },
+        set: function(newValue){
+            debugger;
+            if (isSimpleValue) {
+                return originalProp.value = newValue;
+            } else {
+                return originalProp.set.apply(this, arguments);
+            }
+        }
+    });
+    function getPropertyDescriptor(object, propertyName){
+        var descriptor = Object.getOwnPropertyDescriptor(object, propertyName);
+        if (!object){
+            throw new Error(&quot;Descriptor &quot; + propertyName + &quot; not found&quot;);
+        }
+        if (!descriptor) {
+            return getPropertyDescriptor(Object.getPrototypeOf(object), propertyName);
+        }
+        return descriptor;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><h3 id="访问对象属性增加条件"><a href="#访问对象属性增加条件" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  访问对象属性增加条件</h3> <p>break-on-access是对stopBefore的增强，支持条件debugger</p> <ol><li>常规用法</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>breakOn(document, 'cookie');
+breakOn(document.body,'scrollTop', 'read')
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><img src="/img/post/devtools.png" alt="">
+2. 开启/禁用</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var bp = breakOn(document, 'cookie');
+// found it!
+bp.disable();
+// something else is up....
+bp.enable();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ol start="3"><li>条件断点</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>var i = 0;
+var bp = breakOn(document, 'cookie', false, function(v) {
+    return i++ &gt;= 4;
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="4"><li>设置undefined时</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>var bp = breakOn(document, 'cookie', false, function(v) {
+    return typeof v === 'undefined';
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="打印全部全局变量"><a href="#打印全部全局变量" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  打印全部全局变量</h3> <p>查看当前也买你的window的全局变量，过滤函数和事件</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(function () {
+	'use strict';
+	function getIframe() {
+		var el = document.createElement('iframe');
+		el.style.display = 'none';
+		document.body.appendChild(el);
+		var win = el.contentWindow;
+		document.body.removeChild(el);
+		return win;
+	}
+	function detectGlobals() {
+		var iframe = getIframe();
+		var ret = Object.create(null);
+		for (var prop in window) {
+			if (!(prop in iframe)) {
+				ret[prop] = window[prop];
+			}
+		}
+		return ret;
+	}
+	console.log(detectGlobals());
+})();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h3 id="引入jquery"><a href="#引入jquery" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  引入jquery</h3> <p>执行自动在当前页面引入jq</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(function () {
+  if ( !window.jQuery ) {
+    var s = document.createElement('script');
+    s.setAttribute('src', 'https://cdn.staticfile.org/jquery/3.5.0/jquery.js');
+    s.addEventListener('load', function(){
+      console.log('jQuery loaded!');
+    });
+    document.body.appendChild(s);
+  }
+})();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="source面版css样式更改自动刷新"><a href="#source面版css样式更改自动刷新" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  source面版css样式更改自动刷新</h3> <p>执行source面板的css更改保存页面自动渲染</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(function () {
+  function insertAfter(newElement, targetElement) {
+    var parent = targetElement.parentNode;
+    if (parent.lastChild == targetElement) {
+      parent.appendChild(newElement);
+    } else {
+      parent.insertBefore(newElement, targetElement.nextSibling);
+    }
+  }
+  function reloadStyleSheet(stylesheet) {
+    var element = stylesheet.ownerNode;
+    var clone = element.cloneNode(false);
+    clone.href = addRandomToUrl(clone.href);
+    clone.addEventListener(&quot;load&quot;, function() {
+      if (element.parentNode) {
+        element.parentNode.removeChild(element);
+      }
+    });
+    insertAfter(clone, element);
+  }
+  function addRandomToUrl(input) {
+    // prevent CSS caching
+    var hasRnd = /([?&amp;])_=[^&amp;]*/,
+      hasQueryString = /\?/,
+      hasHash = /(.+)#(.+)/,
+      hash = null,
+      rnd = Math.random();
+    var hashMatches = input.match(hasHash);
+    if (hashMatches) {
+      input = hashMatches[1];
+      hash = hashMatches[2];
+    }
+    url = hasRnd.test(input) ?
+    input.replace(hasRnd, &quot;$1_=&quot; + rnd) :
+    input + (hasQueryString.test(input) ? &quot;&amp;&quot; : &quot;?&quot;) + &quot;_=&quot; + rnd;
+    if (hash) url += '#' + hash;
+    return url;
+  }
+  [].forEach.call(document.styleSheets, function(styleSheet) {
+    if (!styleSheet.href) return;
+    console.log('reload ' + styleSheet.href);
+    reloadStyleSheet(styleSheet);
+  });
+})();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br></div></div><h3 id="页面图片转base64"><a href="#页面图片转base64" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  页面图片转base64</h3> <p>当前页面的img的src转成base64</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(function() {
+  console.group(&quot;Data URLs&quot;);
+  [].forEach.call(document.querySelectorAll(&quot;img&quot;), function(i) {
+    var c = document.createElement(&quot;canvas&quot;);
+    var ctx = c.getContext(&quot;2d&quot;);
+    c.width = i.width;
+    c.height = i.height;
+    try {
+      ctx.drawImage(i, 0, 0);
+      console.log(i, c.toDataURL());
+    }
+    catch(e) {
+      console.log(i, &quot;No Permission - try opening this image in a new tab and running the snippet again?&quot;, i.src);
+    }
+  });
+  [].forEach.call(document.querySelectorAll(&quot;canvas&quot;), function(c) {
+    try {
+      console.log(c, c.toDataURL());
+    }
+    catch(e) {
+      console.log(c, &quot;No Permission&quot;);
+    }
+  });
+  console.groupEnd(&quot;Data URLs&quot;);
+})();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h3 id="显示所有元素的边框"><a href="#显示所有元素的边框" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-bug"></i>  显示所有元素的边框</h3> <p>给当前也买你所有元素增加边框查看布局</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[].forEach.call($$(&quot;*&quot;),function(a){
+  a.style.outline=&quot;1px solid #&quot;+(~~(Math.random()*(1&lt;&lt;24))).toString(16)
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:-50px;bottom:-70px;width:300px;height:600px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2dcanvas" width="300" height="600" class="live2dcanvas" style="position:absolute;left:0px;top:0px;width:300px;height:600px;"></canvas></div></div></div>
+    <script src="/assets/js/app.a9cac676.js" defer></script><script src="/assets/js/5.16132da4.js" defer></script><script src="/assets/js/1.ad84ba3d.js" defer></script><script src="/assets/js/30.e8d07abf.js" defer></script><script src="/assets/js/54.195838f4.js" defer></script>
+  </body>
+</html>

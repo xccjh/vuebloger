@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>linux知识总结 | 技术研究</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/img/logo.jpeg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.26f35423.css" as="style"><link rel="preload" href="/assets/js/app.a9cac676.js" as="script"><link rel="preload" href="/assets/js/5.16132da4.js" as="script"><link rel="preload" href="/assets/js/1.ad84ba3d.js" as="script"><link rel="preload" href="/assets/js/30.e8d07abf.js" as="script"><link rel="preload" href="/assets/js/66.0eeb799b.js" as="script"><link rel="prefetch" href="/assets/js/10.5cea7d44.js"><link rel="prefetch" href="/assets/js/11.73d50b56.js"><link rel="prefetch" href="/assets/js/12.04d69aa9.js"><link rel="prefetch" href="/assets/js/13.704de73f.js"><link rel="prefetch" href="/assets/js/14.c1083114.js"><link rel="prefetch" href="/assets/js/15.17af6143.js"><link rel="prefetch" href="/assets/js/16.e7dd9a5b.js"><link rel="prefetch" href="/assets/js/17.11cf0530.js"><link rel="prefetch" href="/assets/js/18.d7b19b90.js"><link rel="prefetch" href="/assets/js/19.47575e85.js"><link rel="prefetch" href="/assets/js/20.4009a11c.js"><link rel="prefetch" href="/assets/js/21.2f887fcf.js"><link rel="prefetch" href="/assets/js/22.307d3c5e.js"><link rel="prefetch" href="/assets/js/23.5ccb9259.js"><link rel="prefetch" href="/assets/js/24.4946e399.js"><link rel="prefetch" href="/assets/js/25.ff697ec6.js"><link rel="prefetch" href="/assets/js/26.559af2ee.js"><link rel="prefetch" href="/assets/js/27.3a290674.js"><link rel="prefetch" href="/assets/js/28.828f4dd6.js"><link rel="prefetch" href="/assets/js/29.5cedb3c3.js"><link rel="prefetch" href="/assets/js/31.6db7bdc4.js"><link rel="prefetch" href="/assets/js/32.9bd3dab7.js"><link rel="prefetch" href="/assets/js/33.b9bed422.js"><link rel="prefetch" href="/assets/js/34.8c4ef4e2.js"><link rel="prefetch" href="/assets/js/35.cfed6d68.js"><link rel="prefetch" href="/assets/js/36.67695abd.js"><link rel="prefetch" href="/assets/js/37.383d6f5a.js"><link rel="prefetch" href="/assets/js/38.c612a4a3.js"><link rel="prefetch" href="/assets/js/39.5739bbc0.js"><link rel="prefetch" href="/assets/js/4.bab69199.js"><link rel="prefetch" href="/assets/js/40.3e9d4be1.js"><link rel="prefetch" href="/assets/js/41.466c1b69.js"><link rel="prefetch" href="/assets/js/42.0da03c58.js"><link rel="prefetch" href="/assets/js/43.0dfc9817.js"><link rel="prefetch" href="/assets/js/44.50c7c19b.js"><link rel="prefetch" href="/assets/js/45.75ddc72a.js"><link rel="prefetch" href="/assets/js/46.42fe5a76.js"><link rel="prefetch" href="/assets/js/47.ee518bde.js"><link rel="prefetch" href="/assets/js/48.aa76b66d.js"><link rel="prefetch" href="/assets/js/49.61a8038f.js"><link rel="prefetch" href="/assets/js/50.1cc0ea11.js"><link rel="prefetch" href="/assets/js/51.da780b83.js"><link rel="prefetch" href="/assets/js/52.ac2e9839.js"><link rel="prefetch" href="/assets/js/53.746b715d.js"><link rel="prefetch" href="/assets/js/54.195838f4.js"><link rel="prefetch" href="/assets/js/55.17477e6e.js"><link rel="prefetch" href="/assets/js/56.7790ae35.js"><link rel="prefetch" href="/assets/js/57.02e41136.js"><link rel="prefetch" href="/assets/js/58.6045c457.js"><link rel="prefetch" href="/assets/js/59.2cfc9728.js"><link rel="prefetch" href="/assets/js/6.06fb5c1c.js"><link rel="prefetch" href="/assets/js/60.03357dc0.js"><link rel="prefetch" href="/assets/js/61.62acbb0d.js"><link rel="prefetch" href="/assets/js/62.4ab96cc6.js"><link rel="prefetch" href="/assets/js/63.66c24936.js"><link rel="prefetch" href="/assets/js/64.deb96a21.js"><link rel="prefetch" href="/assets/js/65.2a3fe025.js"><link rel="prefetch" href="/assets/js/67.a23737d7.js"><link rel="prefetch" href="/assets/js/68.5285b8bd.js"><link rel="prefetch" href="/assets/js/69.a947c62c.js"><link rel="prefetch" href="/assets/js/7.6af48b10.js"><link rel="prefetch" href="/assets/js/70.5b59c98c.js"><link rel="prefetch" href="/assets/js/71.8ddba1b1.js"><link rel="prefetch" href="/assets/js/72.a56e2af5.js"><link rel="prefetch" href="/assets/js/73.fc6e1561.js"><link rel="prefetch" href="/assets/js/74.8738216c.js"><link rel="prefetch" href="/assets/js/75.bfac855d.js"><link rel="prefetch" href="/assets/js/76.09554907.js"><link rel="prefetch" href="/assets/js/77.22028ab5.js"><link rel="prefetch" href="/assets/js/78.95a6cf25.js"><link rel="prefetch" href="/assets/js/79.21dfa375.js"><link rel="prefetch" href="/assets/js/8.896bcff0.js"><link rel="prefetch" href="/assets/js/80.311822ce.js"><link rel="prefetch" href="/assets/js/81.9d76043c.js"><link rel="prefetch" href="/assets/js/82.24946372.js"><link rel="prefetch" href="/assets/js/83.ee858c97.js"><link rel="prefetch" href="/assets/js/84.5e6d52eb.js"><link rel="prefetch" href="/assets/js/85.d90b86bd.js"><link rel="prefetch" href="/assets/js/86.ce2bef13.js"><link rel="prefetch" href="/assets/js/87.dca6f1d4.js"><link rel="prefetch" href="/assets/js/88.f87fe757.js"><link rel="prefetch" href="/assets/js/89.3f8c08b9.js"><link rel="prefetch" href="/assets/js/9.76076671.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.cdea39b0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.26f35423.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.jpeg" alt="技术研究" class="logo"> <span class="site-name can-hide">技术研究</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/timeLine/" class="nav-link">首页</a></div><div class="nav-item"><a href="/technology/" class="nav-link router-link-active">技术</a></div><div class="nav-item"><a href="/life/" class="nav-link">生活</a></div><div class="nav-item"><a href="/bake/" class="nav-link">备忘</a></div><div class="nav-item"><a href="/tags/" class="nav-link">标签库</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/massage/" class="nav-link">留言板</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">链接</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/xccjh/projects" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nextjs.frontendx.cn/docs/#%E5%AE%89%E8%A3%85" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nextjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://zh.nuxtjs.org/guide/installation" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nuxtjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://angularjs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AngularJS
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://reactnative.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ReactNative
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://element-cn.eleme.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ElementUI
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://youzan.github.io/vant/#/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vant
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://www.fontawesome.com.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Fontawesome
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://developers.weixin.qq.com/miniprogram/dev/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MiniProgram
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://reacttraining.com/react-router/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  react-router-dom
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://webpack.js.org/concepts/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  webpack
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.babeljs.cn/docs/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  babel
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://eslint.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  eslint
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.swiper.com.cn/api/index.html/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  swiper
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://momentjs.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  momentjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/linux/linux-shell.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  shell
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://lodash.com/docs/4.17.15#template" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  lodash
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://koa.bootcss.com/#links" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  koa
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://jestjs.io/docs/en/getting-started" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jest
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://aui.github.io/art-template/zh-cn/docs/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  art-template
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ejs.bootcss.com/#docs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ejs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.layui.com/doc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  layui
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://antv-g2.gitee.io/zh/examples/gallery" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  G2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.echartsjs.com/zh/option.html#title" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ECharts
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.vagrantup.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vagrant
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://docs.docker.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  docker
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/technology/ https://www.runoob.com/redis/redis-tutorial.html" class="nav-link">redis</a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/mysql/mysql-tutorial.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  mysql
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  leaflet
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.tslang.cn/docs/home.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  TypeScript
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://docschina.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  印记中文
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav> <div style="margin-left:20px;margin-right:20px;">
+    音乐
+    <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input"><!----><span class="el-switch__core" style="width:40px;"></span><!----></div> <audio><source src="/mp3/065b_520b_0409_111c898908eab454414c3c326fe77c36.mp3" type="audio/mpeg"></audio></div></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/timeLine/" class="nav-link">首页</a></div><div class="nav-item"><a href="/technology/" class="nav-link router-link-active">技术</a></div><div class="nav-item"><a href="/life/" class="nav-link">生活</a></div><div class="nav-item"><a href="/bake/" class="nav-link">备忘</a></div><div class="nav-item"><a href="/tags/" class="nav-link">标签库</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/massage/" class="nav-link">留言板</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">链接</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/xccjh/projects" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nextjs.frontendx.cn/docs/#%E5%AE%89%E8%A3%85" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nextjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://zh.nuxtjs.org/guide/installation" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nuxtjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://angularjs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AngularJS
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://reactnative.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ReactNative
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://element-cn.eleme.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ElementUI
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://youzan.github.io/vant/#/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vant
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://www.fontawesome.com.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Fontawesome
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://developers.weixin.qq.com/miniprogram/dev/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MiniProgram
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://reacttraining.com/react-router/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  react-router-dom
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://webpack.js.org/concepts/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  webpack
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.babeljs.cn/docs/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  babel
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://eslint.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  eslint
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.swiper.com.cn/api/index.html/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  swiper
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://momentjs.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  momentjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/linux/linux-shell.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  shell
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://lodash.com/docs/4.17.15#template" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  lodash
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://koa.bootcss.com/#links" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  koa
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://jestjs.io/docs/en/getting-started" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jest
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://aui.github.io/art-template/zh-cn/docs/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  art-template
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ejs.bootcss.com/#docs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ejs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.layui.com/doc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  layui
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://antv-g2.gitee.io/zh/examples/gallery" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  G2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.echartsjs.com/zh/option.html#title" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ECharts
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.vagrantup.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vagrant
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://docs.docker.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  docker
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/technology/ https://www.runoob.com/redis/redis-tutorial.html" class="nav-link">redis</a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/mysql/mysql-tutorial.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  mysql
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  leaflet
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.tslang.cn/docs/home.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  TypeScript
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://docschina.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  印记中文
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>linux知识总结</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#linux之du命令" class="sidebar-link">linux之du命令</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#linux重定向、文件读写" class="sidebar-link">linux重定向、文件读写</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#tee" class="sidebar-link">tee</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#新建文件" class="sidebar-link">新建文件</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#重定向" class="sidebar-link">重定向</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#注意点" class="sidebar-link">注意点</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#heredoc" class="sidebar-link">heredoc</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#nl命令" class="sidebar-link">nl命令</a></li></ul></li><li><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#noclobber避免文件重写" class="sidebar-link">noclobber避免文件重写</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#sed命令" class="sidebar-link">sed命令</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#paste命令" class="sidebar-link">paste命令</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#awk命令" class="sidebar-link">awk命令</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#sort命令" class="sidebar-link">sort命令</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#wc命令" class="sidebar-link">wc命令</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#cut命令" class="sidebar-link">cut命令</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#cut-awk-sort分隔符选项" class="sidebar-link">cut-awk-sort分隔符选项</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#查看进程命令" class="sidebar-link">查看进程命令</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#win端口占用解决" class="sidebar-link">win端口占用解决</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#window子系统ubuntu" class="sidebar-link">window子系统Ubuntu</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#查看-修改-删除-添加环境变量" class="sidebar-link">查看/修改/删除/添加环境变量</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#首先明确一点：" class="sidebar-link">首先明确一点：</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#其次，明确一下环境变量的作用。" class="sidebar-link">其次，明确一下环境变量的作用。</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#接着，什么情况下进行设置？" class="sidebar-link">接着，什么情况下进行设置？</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#如何修改？注意在cmd中" class="sidebar-link">如何修改？注意在cmd中</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#如何给变量追加内容，注意在cmd中" class="sidebar-link">如何给变量追加内容，注意在cmd中</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#常用的环境变量及作用" class="sidebar-link">常用的环境变量及作用</a></li></ul></li><li><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#linux装机后做的事" class="sidebar-link">linux装机后做的事</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#修改网卡名" class="sidebar-link">修改网卡名</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#配置ip地址，网关" class="sidebar-link">配置IP地址，网关</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#dns配置文件修改" class="sidebar-link">dns配置文件修改</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#重启网络服务" class="sidebar-link">重启网络服务</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#设置ip和网关" class="sidebar-link">设置ip和网关</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#关闭firewalld防火墙规则" class="sidebar-link">关闭firewalld防火墙规则</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#关闭iptables防火墙规则" class="sidebar-link">关闭iptables防火墙规则</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#关闭selinux防火墙" class="sidebar-link">关闭SELinux防火墙</a></li><li class="sidebar-sub-header"><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#查看-修改主机名-更换源" class="sidebar-link">查看/修改主机名/更换源</a></li></ul></li><li><a href="/technology/linux%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html#vim操作技巧" class="sidebar-link">vim操作技巧</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content__default"><h2 id="linux之du命令"><a href="#linux之du命令" class="header-anchor">#</a> linux之du命令</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>//查看占用空间
+du -hs  .git/objects
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="linux重定向、文件读写"><a href="#linux重定向、文件读写" class="header-anchor">#</a> linux重定向、文件读写</h2> <h3 id="tee"><a href="#tee" class="header-anchor">#</a> tee</h3> <p>使用指令&quot;tee&quot;将用户输入的数据同时保存到文件&quot;file1&quot;和&quot;file2&quot;中，输入如下命令：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ tee file1 file2  #在两个文件中复制内容
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>以上命令执行后，将提示用户输入需要保存到文件的数据，如下所示：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>My Linux                        #提示用户输入数据
+My Linux                        #输出数据，进行输出反馈
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="新建文件"><a href="#新建文件" class="header-anchor">#</a> 新建文件</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>tee file1
+cat &gt;newfile #按住Ctrl+D结束编辑
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>将原本由标准输入改为由指定地方输入
+&gt;&gt; txt.py &lt; hh
+touch 1.txt
+vi 1.txt
+echo 11 &gt; 1.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="重定向"><a href="#重定向" class="header-anchor">#</a> 重定向</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>&gt;、 &gt;&gt;、 1&gt;、 2&gt;、 1&gt;&gt;、 2&gt;&gt; 、tee 、 heredoc...
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol><li><code>cmd | md2</code></li></ol> <p>管道符，将cmd1的标准输出作为cmd2的标准输入</p> <ol start="2"><li><code>&gt; filename</code></li></ol> <p>将标准输出写到文件filename中</p> <ol start="3"><li><code>&lt; filename</code></li></ol> <p>将文件filename的内容读入到标准输出中去</p> <ol start="4"><li><code>&gt;&gt; filename</code></li></ol> <p>将标准输出写到文件filename中，若filename存在则把内容追加到filename那么后面，</p> <ol start="5"><li><code>&gt;| filename</code></li></ol> <p>即使noclobber选项开启，仍然强制将标准输出写到filename中，即把filename内容覆盖掉</p> <ol start="6"><li><code>n&gt;|filename</code></li></ol> <p>即使noclobber选项开启，仍然强制将FD为n的输出写到filename中，即把filename内容覆盖掉</p> <ol start="7"><li><code>n&gt; filename</code></li></ol> <p>将FD为n的输出写到filename文件中</p> <ol start="8"><li><code>n&lt; filename</code></li></ol> <p>将文件filename中内容读入到FD n中</p> <p>9.<code>n&gt;&gt; filename</code></p> <p>将FD为n的输出文件写到filename中，，若filename存在则把内容追加到filename那么后面，</p> <ol start="10"><li><code>&lt;&lt; delimiter</code></li></ol> <p>此处文档（Here——document）</p> <h3 id="注意点"><a href="#注意点" class="header-anchor">#</a> 注意点</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>1&gt; 将正确的输出重定向到某个文件
+2&gt; 将错误的输出重定向到某个文件
+将错误输出和正确输出保存到同一个文件：
+command 1&gt; a.txt 2&gt;&amp;1
+或者写作：command &gt; a.txt 2&gt;&amp;1
+
+同理1&gt;&gt; 2&gt;&gt;其实也就是追加数据到文件中，和前面介绍的&gt;&gt;没有什么不同，需要提到的一点是，如果我们想将错误的和正确的信息重定向追加到同一个文件应该怎么做呢？你可能会想到2&gt;&gt;&amp;1。。。然而现实是，并没有这个语法。然而我们却可以使用1 &gt;&gt; a.txt 2&gt;&amp;1的语法实现这个功能，比如：command 1&gt;&gt; a.txt 2&gt;&amp;1
+看似1&gt; 1&gt;&gt; 2&gt; 2&gt;&gt;是相一一对应的，但是其实不是，他们可以混用，比方说正确的结果想追加，错误的结果我想覆盖。command 1&gt;&gt; right.txt 2&gt; wrong.txt
+
+如果我们想保存正确的结果，错误的结果直接丢向垃圾站，既不保存为文件，也不在标准输出打印又该怎么做呢？
+command 1&gt;&gt; right.txt 2&gt; /dev/null
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="heredoc"><a href="#heredoc" class="header-anchor">#</a> heredoc</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>command &lt;&lt; delimiter
+    document
+delimiter
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>结尾的delimiter 一定要顶格写，前面不能有任何字符，后面也不能有任何字符，包括空格和 tab 缩进。开始的delimiter前后的空格会被忽略掉。</p> <h3 id="nl命令"><a href="#nl命令" class="header-anchor">#</a> nl命令</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>nl命令在linux系统中用来计算文件中行号。nl 可以将输出的文件内容自动的加上行号！其默认的结果与 cat -n 有点不太一样， nl 可以将行号做比较多的显示设计，包括位数与是否自动补齐 0 等等的功能。
+
+1．命令格式：
+nl [选项]... [文件]...
+
+2．命令参数：
+-b  ：指定行号指定的方式，主要有两种：
+
+-b a ：表示不论是否为空行，也同样列出行号(类似 cat -n)；
+
+-b t ：如果有空行，空的那一行不要列出行号(默认值)；
+
+-n  ：列出行号表示的方法，主要有三种：
+
+-n ln ：行号在萤幕的最左方显示；
+
+-n rn ：行号在自己栏位的最右方显示，且不加 0 ；
+
+-n rz ：行号在自己栏位的最右方显示，且加 0 ；
+
+-w  ：行号栏位的占用的位数。
+
+-p 在逻辑定界符处不重新开始计算。
+
+3．命令功能：
+        nl 命令读取 File 参数（缺省情况下标准输入），计算输入中的行号，将计算过的行号写入标准输出。 在输出中，nl 命令根据您在命令行中指定的标志来计算左边的行。 输入文本必须写在逻辑页中。每个逻辑页有头、主体和页脚节（可以有空节）。 除非使用 -p 标志，nl 命令在每个逻辑页开始的地方重新设置行号。 可以单独为头、主体和页脚节设置行计算标志（例如，头和页脚行可以被计算然而文本行不能）。
+
+4．使用实例：
+实例一：用 nl 列出 log2012.log 的内容
+
+命令：
+
+
+nl log2012.log
+输出：
+
+
+[root@localhost test]# nl log2012.log
+     1  2012-01
+     2  2012-02
+
+     3  ======[root@localhost test]#
+说明：文件中的空白行，nl 不会加上行号
+实例二：用 nl 列出 log2012.log 的内容，空本行也加上行号
+
+命令：
+
+
+nl -b a log2012.log
+输出：
+
+
+[root@localhost test]# nl -b a log2012.log
+     1  2012-01
+     2  2012-02
+     3
+     4
+     5  ======[root@localhost test]#
+实例三：让行号前面自动补上0,统一输出格式
+
+输出：
+
+
+[root@localhost test]# nl -b a -n rz log2014.log
+000001  2014-01
+000002  2014-02
+000003  2014-03
+000004  2014-04
+000005  2014-05
+000006  2014-06
+000007  2014-07
+000008  2014-08
+000009  2014-09
+000010  2014-10
+000011  2014-11
+000012  2014-12
+000013  =======
+[root@localhost test]# nl -b a -n rz -w 3 log2014.log
+001     2014-01
+002     2014-02
+003     2014-03
+004     2014-04
+005     2014-05
+006     2014-06
+007     2014-07
+008     2014-08
+009     2014-09
+010     2014-10
+011     2014-11
+012     2014-12
+013     =======
+说明：nl -b a -n rz 命令行号默认为六位，要调整位数可以加上参数 -w 3 调整为3位。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br></div></div><h2 id="noclobber避免文件重写"><a href="#noclobber避免文件重写" class="header-anchor">#</a> noclobber避免文件重写</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ set -o noclobber
+$ echo &quot;kick&quot; &gt; tmp
+-bash: tmp: Cannot overwrite existing file
+$ set +o noclobber
+$ echo &quot;kick&quot; &gt; tmp
+我们也可以写一个简单的if语句的脚本来检查noclobber选项是否开启：
+#!/bin/bash
+# These lines will print a message if the noclobber option is set:
+if [ ! -o noclobber ]
+  then
+    echo &quot;Your files are not protected against accidental overwriting using redirection.&quot;
+fi
+# ./noclobber.sh
+Your files are not protected against accidental overwriting using redirection.
+从输出可以看出，我并未开启noclobber选项。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h2 id="sed命令"><a href="#sed命令" class="header-anchor">#</a> sed命令</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>1.sed查看空格和tab区别
+sed -n l aa.txt
+l为L的小写
+
+2.sed行编辑 [-参数][正则操作，查找字符/操作字符][文本文件]
+一、-参数
+-e&lt;script&gt;或--expression=&lt;script&gt; 以选项中指定的script来处理输入的文本文件。
+-f&lt;script文件&gt;或--file=&lt;script文件&gt; 以选项中指定的script文件来处理输入的文本文件。
+-n 默认情况下，sed 会在所有的脚本指定执行完毕后，会自动输出处理后的内容，而该选项会屏蔽启动输出，需使用 print 命令来完成输出，或者 p 标记会输出修改过的行，将二者匹配使用的效果就是只输出被替换命令修改过的行
+-i 直接更改
+-r 支持使用扩展正则表达式
+-i.bak 备份文件并原处编辑
+二、行操作类型
+a ：后插， a 的后面可以接字串，而这些字串会在新的一行出现(目前的下一行)
+c ：替换， c 的后面可以接字串，这些字串可以取代 n1,n2 之间的行！
+d ：删除，因为是删除啊，所以 d 后面通常不接任何咚咚；
+i ：前插， i 的后面可以接字串，而这些字串会在新的一行出现(目前的上一行)
+例子：
+仅列出 /etc/passwd 文件内的第 5-7 行
+nl /etc/passwd | sed -n '5,7p'
+将 /etc/passwd 的内容列出并且列印行号，同时将第 2~5 行删除
+nl /etc/passwd | sed '2,5d'
+要删除第 3 到最后一行
+nl /etc/passwd | sed '3,$d'
+将第2-5行的内容取代成为『No 2-5 number』
+nl /etc/passwd | sed '2,5c No 2-5 number'
+在第二行后(亦即是加在第三行)加上『drink tea?』字
+nl /etc/passwd | sed '2a drink tea'
+在第二行前
+nl /etc/passwd | sed '2i drink tea'
+这种也可以
+sed -e 4a\newline testfile #使用sed 在第四行后添加新字符串
+追加多行
+[root@www ~]# nl /etc/passwd | sed '2a Drink tea or ......\
+&gt; drink beer ?'
+
+3.sed替换详解
+s/pattern/replacement/flags
+flags详解：
+n	1~512 之间的数字，表示指定要替换的字符串出现第几次时才进行替换，例如，一行中有 3 个 A，但用户只想替换第二个 A，这是就用到这个标记；
+g	对数据中所有匹配到的内容进行替换，如果没有 g，则只会在第一次匹配成功时做替换操作。例如，一行数据中有 3 个 A，则只会替换第一个 A；
+p	会打印与替换命令中指定的模式匹配的行。此标记通常与 -n 选项一起使用。
+w file	将缓冲区中的内容写到指定的 file 文件中；
+&amp;	用正则表达式匹配的内容进行替换；
+\n	匹配第 n 个子串，该子串之前在 pattern 中用 \(\) 指定。
+\	转义（转义替换部分包含：&amp;、\ 等）。
+例子：
+指定 sed 用新文本替换第几处模式匹配的地方：
+[root@localhost ~]# sed 's/test/trial/2' data4.txt
+This is a test of the trial script.
+This is the second test of the trial script.
+可以看到，使用数字 2 作为标记的结果就是，sed 编辑器只替换每行中第 2 次出现的匹配模式。
+如果要用新文件替换所有匹配的字符串，可以使用 g 标记：
+[root@localhost ~]# sed 's/test/trial/g' data4.txt
+This is a trial of the trial script.
+This is the second trial of the trial script.
+我们知道，-n 选项会禁止 sed 输出，但 p 标记会输出修改过的行，将二者匹配使用的效果就是只输出被替换命令修改过的行，例如：
+[root@localhost ~]# cat data5.txt
+This is a test line.
+This is a different line.
+[root@localhost ~]# sed -n 's/test/trial/p' data5.txt
+This is a trial line.
+w 标记会将匹配后的结果保存到指定文件中，比如：
+[root@localhost ~]# sed 's/test/trial/w test.txt' data5.txt
+This is a trial line.
+This is a different line.
+[root@localhost ~]#cat test.txt
+This is a trial line.
+在使用 s 脚本命令时，替换类似文件路径的字符串会比较麻烦，需要将路径中的正斜线进行转义，例如：
+[root@localhost ~]# sed 's/\/bin\/bash/\/bin\/csh/' /etc/passwd
+
+数据的搜寻并替换
+sed 's/要被取代的字串/新的字串/g'
+
+数据的搜寻并执行命令
+nl /etc/passwd | sed -n '/root/{s/bash/blueshell/;p;q}'
+
+多点编辑
+sed -e '3,$d' -e 's/bash/blueshell/'
+
+利用 sed 将 regular_express.txt 内每一行结尾若为 . 则换成 !
+sed -i 's/\.$/\!/g' regular_express.txt
+
+利用 sed 直接在 regular_express.txt 最后一行加入 # This is a test:
+sed -i '$a # This is a test' regular_express.txt
+
+ 4 行之后添加一行：
+
+sed -e '4 a newline' testfile
+4 行之后追加 2 行：
+
+sed -e '4 a newline\nnewline2' testfile
+4 行之后追加 3 行(2 行文字和 1 行空行)
+
+sed -e '4 a newline\nnewline2\n' testfile
+4 行之后追加 1 行空行：
+
+#错误：sed -e '4 a \n' testfile
+sed -e '4 a \ ' testfile 实际上
+
+# 可以添加一个完全为空的空行
+sed '4 a \\'
+
+# 可以添加两个完全为空的空行
+sed '4 a \\n'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br></div></div><h2 id="paste命令"><a href="#paste命令" class="header-anchor">#</a> paste命令</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>paste 指令会把每个文件以列对列的方式，一列列地加以合并。
+-d&lt;间隔字符&gt;或--delimiters=&lt;间隔字符&gt; 　用指定的间隔字符取代跳格字符。
+-s或--serial 　处理成一行。
+
+按行合并，即数据是一行一行拼接，用 cat。
+
+按列合并，则用 paste。
+
+$ more ts1   //查看文件ts1
+1
+2
+$ more ts2   //查看文件ts2
+cat
+paste
+$ cat ts1 ts2  //按行合并
+1
+2
+cat
+paste
+$ paste ts1 ts2 //按列合并
+1 cat
+2 paste
+若是要生成新的文件来存放合并的文件则可用如下命令：
+
+$ cat ts1 ts2 &gt; new_row.txt        //生成新的文件new_row.txt
+$ paste ts1 ts2 &gt; new_col     //生成新的文件new_col，文件格式一般为.txt，在linux中可不加，因为系统可以识别不加.txt的文件
+通常是合并 n 个文件，常用：
+
+$ cat * &gt; new_file //合并当前目录下的所有文件
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><h2 id="awk命令"><a href="#awk命令" class="header-anchor">#</a> awk命令</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>awk是行处理器: 相比较屏幕处理的优点，在处理庞大文件时不会出现内存溢出或是处理缓慢的问题，通常用来格式化文本信息
+awk处理过程: 依次对每一行进行处理，然后输出
+awk命令形式:
+awk [-F|-f|-v] ‘BEGIN{} //{command1; command2} END{}’ file
+ [-F|-f|-v]   大参数，-F指定分隔符，-f调用脚本，-v定义变量 var=value
+'  '          引用代码块
+BEGIN   初始化代码块，在对每一行进行处理之前，初始化代码，主要是引用全局变量，设置FS分隔符
+//           匹配代码块，可以是字符串或正则表达式
+{}           命令代码块，包含一条或多条命令
+；          多条命令使用分号分隔
+END      结尾代码块，在对每一行进行处理之后再执行的代码块，主要是进行最终计算或输出结尾摘要信息
+
+特殊要点:
+$0           表示整个当前行
+$1           每行第一个字段
+NF          字段数量变量
+NR          每行的记录号，多文件记录递增
+FNR        与NR类似，不过多文件记录不递增，每个文件都从1开始
+\t            制表符
+\n           换行符
+FS          BEGIN时定义分隔符
+RS       输入的记录分隔符， 默认为换行符(即文本是按一行一行输入)
+~            匹配，与==相比不是精确比较
+!~           不匹配，不精确比较
+==         等于，必须全部相等，精确比较
+!=           不等于，精确比较
+&amp;&amp;　     逻辑与
+||             逻辑或
++            匹配时表示1个或1个以上
+/[0-9][0-9]+/   两个或两个以上数字
+/[0-9][0-9]*/    一个或一个以上数字
+FILENAME 文件名
+OFS      输出字段分隔符， 默认也是空格，可以改为制表符等
+ORS        输出的记录分隔符，默认为换行符,即处理结果也是一行一行输出到屏幕
+-F'[:#/]'   定义三个分隔符
+
+print &amp; $0
+print 是awk打印指定内容的主要命令
+awk '{print}'  /etc/passwd   ==   awk '{print $0}'  /etc/passwd
+awk '{print &quot; &quot;}' /etc/passwd                                           //不输出passwd的内容，而是输出相同个数的空行，进一步解释了awk是一行一行处理文本
+awk '{print &quot;a&quot;}'   /etc/passwd                                        //输出相同个数的a行，一行只有一个a字母
+awk -F&quot;:&quot; '{print $1}'  /etc/passwd
+awk -F: '{print $1; print $2}'   /etc/passwd                   //将每一行的前二个字段，分行输出，进一步理解一行一行处理文本
+awk  -F: '{print $1,$3,$6}' OFS=&quot;\t&quot; /etc/passwd        //输出字段1,3,6，以制表符作为分隔符
+
+-f指定脚本文件
+awk -f script.awk  file
+BEGIN{
+FS=&quot;:&quot;
+}
+{print $1}               //效果与awk -F&quot;:&quot; '{print $1}'相同,只是分隔符使用FS在代码自身中指定
+
+awk 'BEGIN{X=0} /^$/{ X+=1 } END{print &quot;I find&quot;,X,&quot;blank lines.&quot;}' test
+I find 4 blank lines.
+ ls -l|awk 'BEGIN{sum=0} !/^d/{sum+=$5} END{print &quot;total size is&quot;,sum}'                    //计算文件大小
+total size is 17487
+
+-F指定分隔符
+$1 指指定分隔符后，第一个字段，$3第三个字段， \t是制表符
+一个或多个连续的空格或制表符看做一个定界符，即多个空格看做一个空格
+awk -F&quot;:&quot; '{print $1}'  /etc/passwd
+awk -F&quot;:&quot; '{print $1 $3}'  /etc/passwd                       //$1与$3相连输出，不分隔
+awk -F&quot;:&quot; '{print $1,$3}'  /etc/passwd                       //多了一个逗号，$1与$3使用空格分隔
+awk -F&quot;:&quot; '{print $1 &quot; &quot; $3}'  /etc/passwd                  //$1与$3之间手动添加空格分隔
+awk -F&quot;:&quot; '{print &quot;Username:&quot; $1 &quot;\t\t Uid:&quot; $3 }' /etc/passwd       //自定义输出
+awk -F: '{print NF}' /etc/passwd                                //显示每行有多少字段
+awk -F: '{print $NF}' /etc/passwd                              //将每行第NF个字段的值打印出来
+ awk -F: 'NF==4 {print }' /etc/passwd                       //显示只有4个字段的行
+awk -F: 'NF&gt;2{print $0}' /etc/passwd                       //显示每行字段数量大于2的行
+awk '{print NR,$0}' /etc/passwd                                 //输出每行的行号
+awk -F: '{print NR,NF,$NF,&quot;\t&quot;,$0}' /etc/passwd      //依次打印行号，字段数，最后字段值，制表符，每行内容
+awk -F: 'NR==5{print}'  /etc/passwd                         //显示第5行
+awk -F: 'NR==5 || NR==6{print}'  /etc/passwd       //显示第5行和第6行
+route -n|awk 'NR!=1{print}'                                       //不显示第一行
+
+//匹配代码块
+//纯字符匹配   !//纯字符不匹配   ~//字段值匹配    !~//字段值不匹配   ~/a1|a2/字段值匹配a1或a2
+awk '/mysql/' /etc/passwd
+awk '/mysql/{print }' /etc/passwd
+awk '/mysql/{print $0}' /etc/passwd                   //三条指令结果一样
+awk '!/mysql/{print $0}' /etc/passwd                  //输出不匹配mysql的行
+awk '/mysql|mail/{print}' /etc/passwd
+awk '!/mysql|mail/{print}' /etc/passwd
+awk -F: '/mail/,/mysql/{print}' /etc/passwd         //区间匹配
+awk '/[2][7][7]*/{print $0}' /etc/passwd               //匹配包含27为数字开头的行，如27，277，2777...
+awk -F: '$1~/mail/{print $1}' /etc/passwd           //$1匹配指定内容才显示
+awk -F: '{if($1~/mail/) print $1}' /etc/passwd     //与上面相同
+awk -F: '$1!~/mail/{print $1}' /etc/passwd          //不匹配
+awk -F: '$1!~/mail|mysql/{print $1}' /etc/passwd
+
+IF语句
+必须用在{}中，且比较内容用()扩起来
+awk -F: '{if($1~/mail/) print $1}' /etc/passwd                                       //简写
+awk -F: '{if($1~/mail/) {print $1}}'  /etc/passwd                                   //全写
+awk -F: '{if($1~/mail/) {print $1} else {print $2}}' /etc/passwd            //if...else...
+
+
+条件表达式
+==   !=   &gt;   &gt;=
+awk -F&quot;:&quot; '$1==&quot;mysql&quot;{print $3}' /etc/passwd
+awk -F&quot;:&quot; '{if($1==&quot;mysql&quot;) print $3}' /etc/passwd          //与上面相同
+awk -F&quot;:&quot; '$1!=&quot;mysql&quot;{print $3}' /etc/passwd                 //不等于
+awk -F&quot;:&quot; '$3&gt;1000{print $3}' /etc/passwd                      //大于
+awk -F&quot;:&quot; '$3&gt;=100{print $3}' /etc/passwd                     //大于等于
+awk -F&quot;:&quot; '$3&lt;1{print $3}' /etc/passwd                            //小于
+awk -F&quot;:&quot; '$3&lt;=1{print $3}' /etc/passwd                         //小于等于
+
+逻辑运算符
+&amp;&amp;　||
+awk -F: '$1~/mail/ &amp;&amp; $3&gt;8 {print }' /etc/passwd         //逻辑与，$1匹配mail，并且$3&gt;8
+awk -F: '{if($1~/mail/ &amp;&amp; $3&gt;8) print }' /etc/passwd
+awk -F: '$1~/mail/ || $3&gt;1000 {print }' /etc/passwd       //逻辑或
+awk -F: '{if($1~/mail/ || $3&gt;1000) print }' /etc/passwd
+
+数值运算
+awk -F: '$3 &gt; 100' /etc/passwd
+awk -F: '$3 &gt; 100 || $3 &lt; 5' /etc/passwd
+awk -F: '$3+$4 &gt; 200' /etc/passwd
+awk -F: '/mysql|mail/{print $3+10}' /etc/passwd                    //第三个字段加10打印
+awk -F: '/mysql/{print $3-$4}' /etc/passwd                             //减法
+awk -F: '/mysql/{print $3*$4}' /etc/passwd                             //求乘积
+awk '/MemFree/{print $2/1024}' /proc/meminfo                  //除法
+awk '/MemFree/{print int($2/1024)}' /proc/meminfo           //取整
+
+输出分隔符OFS
+awk '$6 ~ /FIN/ || NR==1 {print NR,$4,$5,$6}' OFS=&quot;\t&quot; netstat.txt
+awk '$6 ~ /WAIT/ || NR==1 {print NR,$4,$5,$6}' OFS=&quot;\t&quot; netstat.txt
+//输出字段6匹配WAIT的行，其中输出每行行号，字段4，5,6，并使用制表符分割字段
+
+输出处理结果到文件
+①在命令代码块中直接输出    route -n|awk 'NR!=1{print &gt; &quot;./fs&quot;}'
+②使用重定向进行输出           route -n|awk 'NR!=1{print}'  &gt; ./fs
+
+格式化输出
+netstat -anp|awk '{printf &quot;%-8s %-8s %-10s\n&quot;,$1,$2,$3}'
+printf表示格式输出
+%格式化输出分隔符
+-8长度为8个字符
+s表示字符串类型
+打印每行前三个字段，指定第一个字段输出字符串类型(长度为8)，第二个字段输出字符串类型(长度为8),
+第三个字段输出字符串类型(长度为10)
+netstat -anp|awk '$6==&quot;LISTEN&quot; || NR==1 {printf &quot;%-10s %-10s %-10s \n&quot;,$1,$2,$3}'
+netstat -anp|awk '$6==&quot;LISTEN&quot; || NR==1 {printf &quot;%-3s %-10s %-10s %-10s \n&quot;,NR,$1,$2,$3}'
+
+IF语句
+awk -F: '{if($3&gt;100) print &quot;large&quot;; else print &quot;small&quot;}' /etc/passwd
+small
+small
+small
+large
+small
+small
+awk -F: 'BEGIN{A=0;B=0} {if($3&gt;100) {A++; print &quot;large&quot;} else {B++; print &quot;small&quot;}} END{print A,&quot;\t&quot;,B}' /etc/passwd
+                                                                                                                  //ID大于100,A加1，否则B加1
+awk -F: '{if($3&lt;100) next; else print}' /etc/passwd                         //小于100跳过，否则显示
+awk -F: 'BEGIN{i=1} {if(i&lt;NF) print NR,NF,i++ }' /etc/passwd
+awk -F: 'BEGIN{i=1} {if(i&lt;NF) {print NR,NF} i++ }' /etc/passwd
+另一种形式
+awk -F: '{print ($3&gt;100 ? &quot;yes&quot;:&quot;no&quot;)}'  /etc/passwd
+awk -F: '{print ($3&gt;100 ? $3&quot;:\tyes&quot;:$3&quot;:\tno&quot;)}'  /etc/passwd
+
+while语句
+awk -F: 'BEGIN{i=1} {while(i&lt;NF) print NF,$i,i++}' /etc/passwd
+7 root 1
+7 x 2
+7 0 3
+7 0 4
+7 root 5
+7 /root 6
+
+数组
+netstat -anp|awk 'NR!=1{a[$6]++} END{for (i in a) print i,&quot;\t&quot;,a[i]}'
+netstat -anp|awk 'NR!=1{a[$6]++} END{for (i in a) printf &quot;%-20s %-10s %-5s \n&quot;, i,&quot;\t&quot;,a[i]}'
+9523                               1
+9929                               1
+LISTEN                            6
+7903                               1
+3038/cupsd                   1
+7913                               1
+10837                             1
+9833                               1
+
+应用1
+awk -F: '{print NF}' helloworld.sh                                                       //输出文件每行有多少字段
+awk -F: '{print $1,$2,$3,$4,$5}' helloworld.sh                                 //输出前5个字段
+awk -F: '{print $1,$2,$3,$4,$5}' OFS='\t' helloworld.sh                 //输出前5个字段并使用制表符分隔输出
+awk -F: '{print NR,$1,$2,$3,$4,$5}' OFS='\t' helloworld.sh           //制表符分隔输出前5个字段，并打印行号
+
+应用2
+awk -F'[:#]' '{print NF}'  helloworld.sh                                                  //指定多个分隔符: #，输出每行多少字段
+awk -F'[:#]' '{print $1,$2,$3,$4,$5,$6,$7}' OFS='\t' helloworld.sh   //制表符分隔输出多字段
+
+应用3
+awk -F'[:#/]' '{print NF}' helloworld.sh                                               //指定三个分隔符，并输出每行字段数
+awk -F'[:#/]' '{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12}' helloworld.sh     //制表符分隔输出多字段
+
+应用4
+计算/home目录下，普通文件的大小，使用KB作为单位
+ls -l|awk 'BEGIN{sum=0} !/^d/{sum+=$5} END{print &quot;total size is:&quot;,sum/1024,&quot;KB&quot;}'
+ls -l|awk 'BEGIN{sum=0} !/^d/{sum+=$5} END{print &quot;total size is:&quot;,int(sum/1024),&quot;KB&quot;}'         //int是取整的意思
+
+应用5
+统计netstat -anp 状态为LISTEN和CONNECT的连接数量分别是多少
+netstat -anp|awk '$6~/LISTEN|CONNECTED/{sum[$6]++} END{for (i in sum) printf &quot;%-10s %-6s %-3s \n&quot;, i,&quot; &quot;,sum[i]}'
+
+应用6
+统计/home目录下不同用户的普通文件的总数是多少？
+ls -l|awk 'NR!=1 &amp;&amp; !/^d/{sum[$3]++} END{for (i in sum) printf &quot;%-6s %-5s %-3s \n&quot;,i,&quot; &quot;,sum[i]}'
+mysql        199
+root           374
+统计/home目录下不同用户的普通文件的大小总size是多少？
+ls -l|awk 'NR!=1 &amp;&amp; !/^d/{sum[$3]+=$5} END{for (i in sum) printf &quot;%-6s %-5s %-3s %-2s \n&quot;,i,&quot; &quot;,sum[i]/1024/1024,&quot;MB&quot;}'
+
+应用7
+输出成绩表
+awk 'BEGIN{math=0;eng=0;com=0;printf &quot;Lineno.   Name    No.    Math   English   Computer    Total\n&quot;;printf &quot;------------------------------------------------------------\n&quot;}{math+=$3; eng+=$4; com+=$5;printf &quot;%-8s %-7s %-7s %-7s %-9s %-10s %-7s \n&quot;,NR,$1,$2,$3,$4,$5,$3+$4+$5} END{printf &quot;------------------------------------------------------------\n&quot;;printf &quot;%-24s %-7s %-9s %-20s \n&quot;,&quot;Total:&quot;,math,eng,com;printf &quot;%-24s %-7s %-9s %-20s \n&quot;,&quot;Avg:&quot;,math/NR,eng/NR,com/NR}' test0
+
+[root@localhost home]# cat test0
+Marry   2143 78 84 77
+Jack    2321 66 78 45
+Tom     2122 48 77 71
+Mike    2537 87 97 95
+Bob     2415 40 57 62
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br></div></div><h2 id="sort命令"><a href="#sort命令" class="header-anchor">#</a> sort命令</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>sort命令是帮我们依据不同的数据类型进行排序，其语法及常用参数格式：
+　　sort [-bcfMnrtk][源文件][-o 输出文件]
+补充说明：sort可针对文本文件的内容，以行为单位来排序。
+
+参　　数：
+  -b   忽略每行前面开始出的空格字符。
+  -c   检查文件是否已经按照顺序排序。
+  -f   排序时，忽略大小写字母。
+  -M   将前面3个字母依照月份的缩写进行排序。
+  -n   依照数值的大小排序。
+  -o&lt;输出文件&gt;   将排序后的结果存入指定的文件。
+  -r   以相反的顺序来排序。
+  -t&lt;分隔字符&gt;   指定排序时所用的栏位分隔字符。
+  -k  选择以哪个区间进行排序。
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+下面通过几个例子来讲述Sort的使用。
+
+（1）sort将文件的每一行作为一个单位，相互比较，比较原则是从首字符向后，依次按ASCII码值进行比较，最后将他们按升序输出。
+
+[rocrocket@rocrocket programming]$ cat seq.txt
+banana
+apple
+pear
+orange
+[rocrocket@rocrocket programming]$ sort seq.txt
+apple
+banana
+orange
+pear
+
+用户可以保存排序后的文件内容，或把排序后的文件内容输出至打印机。下例中用户把排序后的文件内容保存到名为result的文件中。
+$ Sort seq.txt &gt; result
+
+（2）sort的-u选项
+
+它的作用很简单，就是在输出行中去除重复行。
+
+[rocrocket@rocrocket programming]$ cat seq.txt
+banana
+apple
+pear
+orange
+pear
+[rocrocket@rocrocket programming]$ sort seq.txt
+apple
+banana
+orange
+pear
+pear
+[rocrocket@rocrocket programming]$ sort -u seq.txt
+apple
+banana
+orange
+pear
+
+pear由于重复被-u选项无情的删除了。
+
+（3）sort的-r选项
+
+sort默认的排序方式是升序，如果想改成降序，就加个-r就搞定了。
+
+[rocrocket@rocrocket programming]$ cat number.txt
+1
+3
+5
+2
+4
+[rocrocket@rocrocket programming]$ sort number.txt
+1
+2
+3
+4
+5
+[rocrocket@rocrocket programming]$ sort -r number.txt
+5
+4
+3
+2
+1
+（5）sort的-o选项
+
+由于sort默认是把结果输出到标准输出，所以需要用重定向才能将结果写入文件，形如sort filename &gt; newfile。
+
+但是，如果你想把排序结果输出到原文件中，用重定向可就不行了。
+
+[rocrocket@rocrocket programming]$ sort -r number.txt &gt; number.txt
+[rocrocket@rocrocket programming]$ cat number.txt
+[rocrocket@rocrocket programming]$
+看，竟然将number清空了。
+
+就在这个时候，-o选项出现了，它成功的解决了这个问题，让你放心的将结果写入原文件。这或许也是-o比重定向的唯一优势所在。
+
+[rocrocket@rocrocket programming]$ cat number.txt
+1
+3
+5
+2
+4
+[rocrocket@rocrocket programming]$ sort -r number.txt -o number.txt
+[rocrocket@rocrocket programming]$ cat number.txt
+5
+4
+3
+2
+1
+
+（6） sort的-n选项
+
+你有没有遇到过10比2小的情况。我反正遇到过。出现这种情况是由于排序程序将这些数字按字符来排序了，排序程序会先比较1和2，显然1小，所以就将10放在2前面喽。这也是sort的一贯作风。
+
+我们如果想改变这种现状，就要使用-n选项，来告诉sort，“要以数值来排序”！
+
+[rocrocket@rocrocket programming]$ cat number.txt
+1
+10
+19
+11
+2
+5
+[rocrocket@rocrocket programming]$ sort number.txt
+1
+10
+11
+19
+2
+5
+[rocrocket@rocrocket programming]$ sort -n number.txt
+1
+2
+5
+10
+11
+19
+
+（7） sort的-t选项和-k选项
+
+如果有一个文件的内容是这样：
+
+[rocrocket@rocrocket programming]$ cat facebook.txt
+banana:30:5.5
+apple:10:2.5
+pear:90:2.3
+orange:20:3.4
+
+这个文件有三列，列与列之间用冒号隔开了，第一列表示水果类型，第二列表示水果数量，第三列表示水果价格。那么我想以水果数量来排序，也就是以第二列来排序，如何利用sort实现？幸好，sort提供了-t选项，后面可以设定间隔符。指定了间隔符之后，就可以用-k来指定列数了。
+
+[rocrocket@rocrocket programming]$ sort -n -k 2 -t ‘:’ facebook.txt
+apple:10:2.5
+orange:20:3.4
+banana:30:5.5
+pear:90:2.3
+
+（8） 其他的sort常用选项
+
+-f会将小写字母都转换为大写字母来进行比较，亦即忽略大小写
+
+-c会检查文件是否已排好序，如果乱序，则输出第一个乱序的行的相关信息，最后返回1
+
+-C会检查文件是否已排好序，如果乱序，不输出内容，仅返回1
+
+-M会以月份来排序，比如JAN小于FEB等等
+
+-b会忽略每一行前面的所有空白部分，从第一个可见字符开始比较。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br></div></div><h2 id="wc命令"><a href="#wc命令" class="header-anchor">#</a> wc命令</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>用wc指令我们可以计算文件的Byte数、字数、或是列数，若不指定文件名称、或是所给予的文件名为&quot;-&quot;，则wc指令会从标准输入设备读取数据。
+-c或--bytes或--chars 只显示Bytes数。
+-l或--lines 只显示行数。
+-w或--words 只显示字数
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="cut命令"><a href="#cut命令" class="header-anchor">#</a> cut命令</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>cut是一个选取命令，就是将一段数据经过分析，取出我们想要的。一般来说，选取信息通常是针对“行”来进行分析的，并不是整篇信息分析的。
+
+（1）其语法格式为：
+cut  [-bn] [file] 或 cut [-c] [file]  或  cut [-df] [file]
+
+使用说明
+cut 命令从文件的每一行剪切字节、字符和字段并将这些字节、字符和字段写至标准输出。
+如果不指定 File 参数，cut 命令将读取标准输入。必须指定 -b、-c 或 -f 标志之一。
+
+主要参数
+-b ：以字节为单位进行分割。这些字节位置将忽略多字节字符边界，除非也指定了 -n 标志。
+-c ：以字符为单位进行分割。
+-d ：自定义分隔符，默认为制表符。
+-f  ：与-d一起使用，指定显示哪个区域。
+-n ：取消分割多字节字符。仅和 -b 标志一起使用。如果字符的最后一个字节落在由 -b 标志的 List 参数指示的&lt;br /&gt;范围之内，该字符将被写出；否则，该字符将被排除。
+
+（2）cut一般以什么为依据呢? 也就是说，我怎么告诉cut我想定位到的剪切内容呢?
+
+cut命令主要是接受三个定位方法：
+
+第一，字节（bytes），用选项-b
+
+第二，字符（characters），用选项-c
+
+第三，域（fields），用选项-f
+
+（3）以“字节”定位
+
+举个例子吧，当你执行ps命令时，会输出类似如下的内容：
+
+[rocrocket@rocrocket programming]$ who
+rocrocket :0           2009-01-08 11:07
+rocrocket pts/0        2009-01-08 11:23 (:0.0)
+rocrocket pts/1        2009-01-08 14:15 (:0.0)
+如果我们想提取每一行的第3个字节，就这样：
+
+[rocrocket@rocrocket programming]$ who|cut -b 3
+c
+c
+c
+
+（4） 如果“字节”定位中，我想提取第3，第4、第5和第8个字节，怎么办?
+
+-b支持形如3-5的写法，而且多个定位之间用逗号隔开就成了。看看例子吧：
+
+[rocrocket@rocrocket programming]$ who|cut -b 3-5,8
+croe
+croe
+croe
+但有一点要注意，cut命令如果使用了-b选项，那么执行此命令时，cut会先把-b后面所有的定位进行从小到大排序，然后再提取。可不能颠倒定位的顺序哦。这个例子就可以说明这个问题：
+
+[rocrocket@rocrocket programming]$ who|cut -b 8,3-5
+croe
+croe
+croe
+（5） 还有哪些类似“3-5”这样的小技巧，列举一下吧!
+
+[rocrocket@rocrocket programming]$ who
+rocrocket :0           2009-01-08 11:07
+rocrocket pts/0        2009-01-08 11:23 (:0.0)
+rocrocket pts/1        2009-01-08 14:15 (:0.0)
+[rocrocket@rocrocket programming]$ who|cut -b -3
+roc
+roc
+roc
+[rocrocket@rocrocket programming]$ who|cut -b 3-
+crocket :0           2009-01-08 11:07
+crocket pts/0        2009-01-08 11:23 (:0.0)
+crocket pts/1        2009-01-08 14:15 (:0.0)
+想必你也看到了，-3表示从第一个字节到第三个字节，而3-表示从第三个字节到行尾。如果你细心，你可以看到这两种情况下，都包括了第三个字节“c”。
+如果我执行who|cut -b -3,3-，你觉得会如何呢？答案是输出整行，不会出现连续两个重叠的c的。看：
+
+[rocrocket@rocrocket programming]$ who|cut -b -3,3-
+rocrocket :0           2009-01-08 11:07
+rocrocket pts/0        2009-01-08 11:23 (:0.0)
+rocrocket pts/1        2009-01-08 14:15 (:0.0)
+（6）给个以字符为定位标志的最简单的例子吧!
+
+下面例子你似曾相识，提取第3，第4，第5和第8个字符：
+
+[rocrocket@rocrocket programming]$ who|cut -c 3-5,8
+croe
+croe
+croe
+不过，看着怎么和-b没有什么区别啊？莫非-b和-c作用一样? 其实不然，看似相同，只是因为这个例子举的不好，who输出的都是单字节字符，所以用-b和-c没有区别，如果你提取中文，区别就看出来了，来，看看中文提取的情况：
+
+[rocrocket@rocrocket programming]$ cat cut_ch.txt
+星期一
+星期二
+星期三
+星期四
+[rocrocket@rocrocket programming]$ cut -b 3 cut_ch.txt
+�
+�
+�
+�
+[rocrocket@rocrocket programming]$ cut -c 3 cut_ch.txt
+一
+二
+三
+四
+看到了吧，用-c则会以字符为单位，输出正常；而-b只会傻傻的以字节（8位二进制位）来计算，输出就是乱码。
+既然提到了这个知识点，就再补充一句，如果你学有余力，就提高一下。
+当遇到多字节字符时，可以使用-n选项，-n用于告诉cut不要将多字节字符拆开。例子如下：
+
+[rocrocket@rocrocket programming]$ cat cut_ch.txt |cut -b 2
+�
+�
+�
+�
+[rocrocket@rocrocket programming]$ cat cut_ch.txt |cut -nb 2
+
+[rocrocket@rocrocket programming]$ cat cut_ch.txt |cut -nb 1,2,3
+星
+星
+星
+星
+（7）域是怎么回事呢？解释解释:)
+
+为什么会有“域”的提取呢，因为刚才提到的-b和-c只能在固定格式的文档中提取信息，而对于非固定格式的信息则束手无策。这时候“域”就派上用场了。如果你观察过/etc/passwd文件，你会发现，它并不像who的输出信息那样具有固定格式，而是比较零散的排放。但是，冒号在这个文件的每一行中都起到了非常重要的作用，冒号用来隔开每一个项。
+
+我们很幸运，cut命令提供了这样的提取方式，具体的说就是设置“间隔符”，再设置“提取第几个域”，就OK了！
+
+以/etc/passwd的前五行内容为例：
+
+[rocrocket@rocrocket programming]$ cat /etc/passwd|head -n 5
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+[rocrocket@rocrocket programming]$ cat /etc/passwd|head -n 5|cut -d : -f 1
+root
+bin
+daemon
+adm
+lp
+看到了吧，用-d来设置间隔符为冒号，然后用-f来设置我要取的是第一个域，再按回车，所有的用户名就都列出来了！呵呵 有成就感吧！
+当然，在设定-f时，也可以使用例如3-5或者4-类似的格式：
+
+[rocrocket@rocrocket programming]$ cat /etc/passwd|head -n 5|cut -d : -f 1,3-5
+root:0:0:root
+bin:1:1:bin
+daemon:2:2:daemon
+adm:3:4:adm
+lp:4:7:lp
+[rocrocket@rocrocket programming]$ cat /etc/passwd|head -n 5|cut -d : -f 1,3-5,7
+root:0:0:root:/bin/bash
+bin:1:1:bin:/sbin/nologin
+daemon:2:2:daemon:/sbin/nologin
+adm:3:4:adm:/sbin/nologin
+lp:4:7:lp:/sbin/nologin
+[rocrocket@rocrocket programming]$ cat /etc/passwd|head -n 5|cut -d : -f -2
+root:x
+bin:x
+daemon:x
+adm:x
+lp:x
+（8）如果遇到空格和制表符时，怎么分辨呢？我觉得有点乱，怎么办？
+
+有时候制表符确实很难辨认，有一个方法可以看出一段空格到底是由若干个空格组成的还是由一个制表符组成的。
+
+[rocrocket@rocrocket programming]$ cat tab_space.txt
+this is tab finish.
+this is several space      finish.
+[rocrocket@rocrocket programming]$ sed -n l tab_space.txt
+this is tab\tfinish.$
+this is several space      finish.$
+看到了吧，如果是制表符（TAB），那么会显示为\t符号，如果是空格，就会原样显示。
+通过此方法即可以判断制表符和空格了。
+注意，上面sed -n后面的字符是L的小写字母哦，不要看错。
+
+（9）我应该在cut -d中用什么符号来设定制表符或空格呢?
+
+其实cut的-d选项的默认间隔符就是制表符，所以当你就是要使用制表符的时候，完全就可以省略-d选项，而直接用－f来取域就可以了。
+
+如果你设定一个空格为间隔符，那么就这样：
+
+[rocrocket@rocrocket programming]$ cat tab_space.txt |cut -d ' ' -f 1
+this
+this
+注意，两个单引号之间可确实要有一个空格哦，不能偷懒。
+而且，你只能在-d后面设置一个空格，可不许设置多个空格，因为cut只允许间隔符是一个字符。
+
+[rocrocket@rocrocket programming]$ cat tab_space.txt |cut -d ' ' -f 1
+cut: the delimiter must be a single character
+Try `cut --help' for more information.
+
+（10）cut有哪些缺陷和不足？
+
+猜出来了吧？对，就是在处理多空格时。
+如果文件里面的某些域是由若干个空格来间隔的，那么用cut就有点麻烦了，因为cut只擅长处理“以一个字符间隔”的文本内容
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br></div></div><h2 id="cut-awk-sort分隔符选项"><a href="#cut-awk-sort分隔符选项" class="header-anchor">#</a> cut-awk-sort分隔符选项</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+【cut 命令】
+格式：cut [选项] file
+选项:
+	-b ：以字节为单位进行分割。这些字节位置将忽略多字节字符边界，除非也指定了 -n 标志。
+	-c ：以字符为单位进行分割。
+	-d ：自定义分隔符，默认为制表符。
+	-f ：与-d一起使用，指定显示哪个区域(fields)。
+	-n ：取消分割多字节字符。仅和 -b 标志一起使用。如果字符的最后一个字节落在由 -b 标志的 List 参数指示的&lt;br /&gt;范围之内，该字符将被写出；否则，该字符将被排除。
+具体例子：http://www.cnblogs.com/dong008259/archive/2011/12/09/2282679.html
+
+
+【awk 命令】
+格式：awk [选项] '条件{动作}' filenames
+选项:
+	-F	：指定分隔符
+	$n	: $0指当前行，$1~$n	指第几列
+具体例子：http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858470.html
+
+
+
+【sort 命令】
+格式：sort [选项][源文件][-o 输出到文件]
+选项:
+  -b   忽略每行前面开始出的空格字符。
+  -c   检查文件是否已经按照顺序排序。
+  -f   排序时，忽略大小写字母。
+  -M   将前面3个字母依照月份的缩写进行排序。
+  -n   依照数值的大小排序。
+  -o&lt;输出文件&gt;   将排序后的结果存入指定的文件。
+  -r   以相反的顺序来排序。
+  -t&lt;分隔字符&gt;   指定排序时所用的栏位分隔字符。
+  -k  选择以哪个区间进行排序。
+具体例子：http://www.cnblogs.com/dong008259/archive/2011/12/08/2281214.html
+
+总结：注意上面三个命令定义分隔符选项：
+cut命令是以-d选项来指定分隔符，默认为制表符;-f指定显示哪个区域或哪列
+awk命令是以-F选项来指定分隔符，默认为制表符;$1~$n指定第几列
+sort命令是以-t选项来指定分隔符，默认为制表符;-k指定哪个区间或哪列
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br></div></div><h2 id="查看进程命令"><a href="#查看进程命令" class="header-anchor">#</a> 查看进程命令</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>tasklist | findstr &quot;9050&quot;
+taskkill /f /t /im  qq.exe
+/F 指定要强行终止的进程。
+/T Tree kill: 终止指定的进程和任何由此启动的子进程。
+/IM image name 指定要终止的进程的映像名称。通配符 '*'可用来指定所有映像名。
+
+
+netstat -ntlp | grep ssh
+netstat -ano | findstr '8080'
+tasklist | findstr 'nginx'
+taskkill -PID 80894 -F  //PID process id 指定要终止的进程的PID。
+taskkill -im 'nginx.exe' -F
+
+
+n--禁止反向域名查找
+l--listing
+t--tcp
+p--PID
+a--all
+o--time
+
+kill -9
+
+ps -ef//显示所有命令，连带命令行,被用在System V Style
+ps -aux//显示所有包含其他使用者的行程,最初用到Unix Style中
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h2 id="win端口占用解决"><a href="#win端口占用解决" class="header-anchor">#</a> win端口占用解决</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>1.netstat -ano  指令查看所有的端口占用情况
+活动连接
+协议   本地地址    外部地址       状态        PID
+TCP  0.0.0.0:135  0.0.0.0:0  LISTENING  472
+
+备注：只截取了部分
+
+2.查看指定8080端口的占用情况
+netstat -aon|findstr &quot;8080&quot;
+协议    本地地址             外部地址          状态              PID
+TCP    0.0.0.0:8080        0.0.0.0:0     LISTENING       9524
+TCP    [::]:8080                  [::]:0        LISTENING       9524
+
+3.查看PID对应的进程
+tasklist|findstr &quot;9524&quot;
+ 映像名称            PID 会话名       会话#     内存使用
+javaw.exe       9524 Console         1         886,132 K
+
+4.结束该进程
+taskkill /f /t /im java.exe
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="window子系统ubuntu"><a href="#window子系统ubuntu" class="header-anchor">#</a> window子系统Ubuntu</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>更改源配置
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak备份
+sudo vim /etc/apt/sources.list更改
+sudo apt-get update更新
+
+
+
+在 bash 中通过指定 /mnt/c /mnt/d … /mnt/盘符 可以直接操作对应的 windows 中的 C 盘，D 盘等
+/mnt/c
+子系统安装路径
+%LOCALAPPDATA%\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc
+
+ifconfig  ## 在Linux子系统默认命令端输入，查看ip地址
+
+
+
+
+
+首先默认安装的ssh是缺少密钥的，如果你不想手动配置aes等几种密钥的话，最好是先删了ssh，然后再重新安装
+重新安装后，那些密钥文件就会自动生成了
+卸载 ssh server
+sudo apt-get remove openssh-server
+安装 ssh server
+sudo apt-get install openssh-server
+直接 删了这个配置文件，让ssh服务自己想办法去
+sudo rm /etc/ssh/ssh_config
+启动 ssh server
+sudo service ssh --full-restart
+
+
+
+ssh配置
+sudo vim /etc/ssh/sshd_config
+#默认的是22
+Port 2222
+# 密码验证登录
+PasswordAuthentication yes
+
+
+PermitEmptyPasswords yes
+PermitRootLogin yes   # 可以root远程登录
+ListenAddress 0.0.0.0
+
+
+UsePrivilegeSeparation no
+
+AllowUsers sky # 远程登录时的用户名
+
+
+重启ssh服务
+/etc/initd.d/sshd restart
+ service sshd restart
+
+
+
+
+启动sshd时，报“Could not load host key”错
+Could not load host key: /etc/ssh/ssh_host_rsa_key
+Could not load host key: /etc/ssh/ssh_host_ecdsa_key
+Could not load host key: /etc/ssh/ssh_host_ed25519_keyll /etc/ssh/
+检查密钥文件是否存在且合规
+ll /etc/ssh/
+-rw-r--r-- 1 root root 242153 Mar 21 22:18 moduli
+-rw-r--r-- 1 root root 2208 Mar 21 22:18 ssh_config
+-rw------- 1 root root 227 May 22 16:48 ssh_host_ecdsa_key
+-rw-r--r-- 1 root root 179 May 22 16:48 ssh_host_ecdsa_key.pub
+-rw------- 1 root root 411 May 22 16:48 ssh_host_ed25519_key
+-rw-r--r-- 1 root root 99 May 22 16:48 ssh_host_ed25519_key.pub
+-rw------- 1 root root 1679 May 22 16:48 ssh_host_rsa_key
+-rw-r--r-- 1 root root 399 May 22 16:48 ssh_host_rsa_key.pub
+-rw------- 1 root root 4361 Mar 21 22:18 sshd_config
+
+
+生成rsa_key
+ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
+生成ecdsa_key
+ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key
+生成ed25519_key
+ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key
+
+
+
+ls ./* |grep 文件名
+ps -ef |grep tomcat
+ps -aux |grep nginx
+kill -9 pid
+tail -n 200 /var/log/ngimx/access.log
+tail -f
+./startup.sh
+curl 127.0.0.1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br></div></div><h2 id="查看-修改-删除-添加环境变量"><a href="#查看-修改-删除-添加环境变量" class="header-anchor">#</a> 查看/修改/删除/添加环境变量</h2> <h3 id="首先明确一点："><a href="#首先明确一点：" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-credit-card-alt"></i> 首先明确一点：</h3> <ul><li>所有的在cmd命令行下对环境变量的修改只对当前窗口有效，不是永久性的修改。也就是说当关闭此cmd命令行窗口后，将不再起作用。永久性修改环境变量的方法有两种：一种是直接修改注册表（此种方法目前没试验过），另一种是通过我的电脑-〉属性-〉高级，来设置系统的环境变量（查看详细）。
+</li></ul> <h3 id="其次，明确一下环境变量的作用。"><a href="#其次，明确一下环境变量的作用。" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-credit-card-alt"></i> 其次，明确一下环境变量的作用。</h3> <p>它是操作系统用来指定运行环境的一些参数。比如临时文件夹位置和系统文件夹位置等。当你运行某些程序时，除了在当前文件夹中寻找外，还会到这些环境变量中去查找，比如“Path”就是一个变量，里面存储了一些常用的命令所存放的目录路径</p> <h3 id="接着，什么情况下进行设置？"><a href="#接着，什么情况下进行设置？" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-credit-card-alt"></i> 接着，什么情况下进行设置？</h3> <p>当启动cmd命令行窗口调用某一命令的时候，经常会出现“xxx不是内部或外部命令，也不是可运行的程序或批处理文件”，如果你的拼写没有错误，同时计算机中确实存在这个程序，那么出现这个提示就是你的path变量没有设置正确，因为你的path路径，也就是默认路径里没有你的程序，同时你有没有给出你程序的绝对路径（因为你只是输入了命令或程序的名称而已），这是操作系统不知道去哪儿找你的程序，就会提示这个问题。</p> <h3 id="如何修改？注意在cmd中"><a href="#如何修改？注意在cmd中" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-credit-card-alt"></i> 如何修改？注意在cmd中</h3> <p>1、查看当前所有可用的环境变量：输入 set 即可查看。
+2、查看某个环境变量：输入 “set 变量名”即可，比如想查看path变量的值，即输入 set path
+3、修改环境变量 ：输入 “set 变量名=变量内容”即可，比如将path设置为“d:\nmake.exe”，只要输入set path=&quot;d:\nmake.exe&quot;。注意，此修改环境变量是指用现在的内容去覆盖以前的内容，并不是追加。比如当我设置了上面的path路径之后，如果我再重新输入set path=&quot;c&quot;，再次查看path路径的时候，其值为“c:”，而不是“d:\nmake.exe”；“c”。</p> <h3 id="如何给变量追加内容，注意在cmd中"><a href="#如何给变量追加内容，注意在cmd中" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-credit-card-alt"></i> 如何给变量追加内容，注意在cmd中</h3> <p>设置为=不同于3.中的设置，那个是覆盖,输入“set 变量名=%变量名%;变量内容”。如，为path添加一个新的路径，输入“ set path=%path%;d:\nmake.exe”即可将d:\nmake.exe添加到path中，再次执行&quot;set path=%path%;c:&quot;，那么，使用set path语句来查看的时候，将会有：d:\nmake.exe;c:，而不是像第3步中的只有c:。</p> <h3 id="常用的环境变量及作用"><a href="#常用的环境变量及作用" class="header-anchor">#</a> <i aria-hidden="true" class="fa fa-credit-card-alt"></i> 常用的环境变量及作用</h3> <p>下面贴上一些常用的环境变量及作用</p> <table><thead><tr><th style="text-align:center;">变量</th> <th style="text-align:center;">作用域</th> <th style="text-align:center;">解释</th></tr></thead> <tbody><tr><td style="text-align:center;">%ALLUSERSPROFILE%</td> <td style="text-align:center;">局部</td> <td style="text-align:center;">返回所有“用户配置文件”的位置。</td></tr> <tr><td style="text-align:center;">%APPDATA%</td> <td style="text-align:center;">局部</td> <td style="text-align:center;">返回默认情况下应用程序存储数据的位置。</td></tr> <tr><td style="text-align:center;">%CD%</td> <td style="text-align:center;">局部</td> <td style="text-align:center;">返回当前目录字符串。</td></tr> <tr><td style="text-align:center;">%CMDCMDLINE%</td> <td style="text-align:center;">局部</td> <td style="text-align:center;">返回用来启动当前的 Cmd.exe 的准确命令行。</td></tr> <tr><td style="text-align:center;">%CMDEXTVERSION%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回当前的“命令处理程序扩展”的版本号。</td></tr> <tr><td style="text-align:center;">%COMPUTERNAME%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回计算机的名称。</td></tr> <tr><td style="text-align:center;">%COMSPEC%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回命令行解释器可执行程序的准确路径。</td></tr> <tr><td style="text-align:center;">%DATE%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回当前日期。使用与 date /t 命令相同的格式。由 Cmd.exe 生成。有关 date 命令的详细信息，请参阅 Date。</td></tr> <tr><td style="text-align:center;">%ERRORLEVEL%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回最近使用过的命令的错误代码。通常用非零值表示错误。</td></tr> <tr><td style="text-align:center;">%HOMEDRIVE%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回连接到用户主目录的本地工作站驱动器号。基于主目录值的设置。用户主目录是在“本地用户和组”中指定的。</td></tr> <tr><td style="text-align:center;">%HOMEPATH%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回用户主目录的完整路径。基于主目录值的设置。用户主目录是在“本地用户和组”中指定的。</td></tr> <tr><td style="text-align:center;">%HOMESHARE%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回用户的共享主目录的网络路径。基于主目录值的设置。用户主目录是在“本地用户和组”中指定的。</td></tr> <tr><td style="text-align:center;">%LOGONSEVER%</td> <td style="text-align:center;">局部</td> <td style="text-align:center;">返回验证当前登录会话的域控制器的名称。</td></tr> <tr><td style="text-align:center;">%NUMBER_OF_PROCESSORS%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">指定安装在计算机上的处理器的数目。</td></tr> <tr><td style="text-align:center;">%OS%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回操作系统的名称。Windows 2000 将操作系统显示为 Windows_NT。</td></tr> <tr><td style="text-align:center;">%PATH%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">指定可执行文件的搜索路径。</td></tr> <tr><td style="text-align:center;">%PATHEXT%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回操作系统认为可执行的文件扩展名的列表。</td></tr> <tr><td style="text-align:center;">%PROCESSOR_ARCHITECTURE%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回处理器的芯片体系结构。值: x86，IA64。</td></tr> <tr><td style="text-align:center;">%PROCESSOR_IDENTFIER%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回处理器说明。</td></tr> <tr><td style="text-align:center;">%PROCESSOR_LEVEL%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回计算机上安装的处理器的型号。</td></tr> <tr><td style="text-align:center;">%PROCESSOR_REVISION%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回处理器修订号的系统变量。</td></tr> <tr><td style="text-align:center;">%PROMPT%</td> <td style="text-align:center;">局部</td> <td style="text-align:center;">返回当前解释程序的命令提示符设置。由 Cmd.exe 生成。</td></tr> <tr><td style="text-align:center;">%RANDOM%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回 0 到 32767 之间的任意十进制数字。由 Cmd.exe 生成。</td></tr> <tr><td style="text-align:center;">%SYSTEMDRIVE%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回包含 Windows XP 根目录（即系统根目录）的驱动器。</td></tr> <tr><td style="text-align:center;">%SYSTEMROOT%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回 Windows XP 根目录的位置。</td></tr> <tr><td style="text-align:center;">%TEMP%</td> <td style="text-align:center;">and %TMP%</td> <td style="text-align:center;">系统和用户</td></tr> <tr><td style="text-align:center;">%TIME%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回当前时间。使用与 time /t 命令相同的格式。由 Cmd.exe 生成。有关 time 命令的详细信息，请参阅 Time。</td></tr> <tr><td style="text-align:center;">%USERDOMAIN%</td> <td style="text-align:center;">局部</td> <td style="text-align:center;">返回包含用户帐户的域的名称。</td></tr> <tr><td style="text-align:center;">%USERNAME%</td> <td style="text-align:center;">局部</td> <td style="text-align:center;">返回当前登录的用户的名称。</td></tr> <tr><td style="text-align:center;">%UserProfile%</td> <td style="text-align:center;">局部</td> <td style="text-align:center;">返回当前用户的配置文件的位置。</td></tr> <tr><td style="text-align:center;">%WINDIR%</td> <td style="text-align:center;">系统</td> <td style="text-align:center;">返回操作系统目录的位置。</td></tr></tbody></table> <h2 id="linux装机后做的事"><a href="#linux装机后做的事" class="header-anchor">#</a> linux装机后做的事</h2> <h3 id="修改网卡名"><a href="#修改网卡名" class="header-anchor">#</a> 修改网卡名</h3> <p>CentOS 7.x系统中网卡命名规则被重新定义，可能会是”ifcfg-ens33”等，查看通常是类似ens33或eno开头的，遵循网卡一致性命名规则，下面我们把网卡改为ifcfg-eth0这种。修改网卡名</p> <ol><li>编辑配置文件
+cd /etc/sysconfig/network-scripts/
+mv  ifcfg-ens33  ifcfg-eth0  #修改名称
+vi  ifcfg-eth0  #编辑
+NAME=eth0   #修改
+DEVICE=eth0   #修改
+:wq! #保存退出</li> <li>修改grub配置文件
+vi /etc/sysconfig/grub  #编辑
+在”GRUB_CMDLINE_LINUX“变量中添加一句”net.ifnames=0 biosdevname=0“//virtualBox不可设置命名规则
+:wq! #保存退出</li> <li>重新生成grub配置并更新内核参数
+grub2-mkconfig -o /boot/grub2/grub.cfg</li> <li>重启
+reboot</li></ol> <h3 id="配置ip地址，网关"><a href="#配置ip地址，网关" class="header-anchor">#</a> 配置IP地址，网关</h3> <ol><li>vi /etc/sysconfig/network-scripts/ifcfg-eth0
+//修改以下内容
+BOOTPROTO=static  //启用静态IP地址
+ONBOOT=yes      //开启自动启用网络连接
+//添加以下内容
+IPADDR=192.168.30.1      //设置IP地址
+NETMASK=255.255.255.0   //子网掩码
+GATEWAY=192.168.131.2   //设置网关</li></ol> <h3 id="dns配置文件修改"><a href="#dns配置文件修改" class="header-anchor">#</a> dns配置文件修改</h3> <ol><li>vi etc/resolv.conf
+nameserver 8.8.8.8
+常用的DNS地址: 阿里  223.5.5.5  或者  223.6.6.6
+谷歌  8.8.8.8</li></ol> <h3 id="重启网络服务"><a href="#重启网络服务" class="header-anchor">#</a> 重启网络服务</h3> <ol><li>service network restart</li></ol> <h3 id="设置ip和网关"><a href="#设置ip和网关" class="header-anchor">#</a> 设置ip和网关</h3> <ol><li>如何设置Linux的IP地址
+在本地电脑打开“命令行窗口”，输入命令ipconfig，查看 以太网适配器 VMware Network Adapter VMnet8下的IPv4 地址
+当我们设置Linux的IP地址时，需要保证Linux的IP地址 与 VMnet8下的IPv4地址 的前面三位数必须相同，即 192.168.30 必须相同，这样Linux就能跟我们本地电脑互相通信，最后一位数不相同即可，例如Linux的IP地址可以设置为192.168.30.1 或者 192.168.30.124等</li> <li>如何设置Linux的网关，子网掩码
+VMware点击编辑(E) → 虚拟网络编辑器(N),查看VMnet8 (NAT 模式)下的网关，选择VMnet8，再点击&quot;NAT设置&quot;按钮,查看VMnet8 (NAT 模式)下的子网掩码</li></ol> <h3 id="关闭firewalld防火墙规则"><a href="#关闭firewalld防火墙规则" class="header-anchor">#</a> 关闭firewalld防火墙规则</h3> <div class="language- extra-class"><pre><code>firewall-cmd --state查看
+systemctrl stop firewalld.service关闭
+systemctrl disable firewalld.service禁止开机启动
+</code></pre></div><h3 id="关闭iptables防火墙规则"><a href="#关闭iptables防火墙规则" class="header-anchor">#</a> 关闭iptables防火墙规则</h3> <ol><li><p>iptables安装
+CentOS执行：
+yum install iptables
+Debian/Ubuntu执行：
+apt-get install iptables
+iptables -V   (注意：V是大写字母V）</p></li> <li><p>关闭iptables
+service iptables stop
+service iptables start
+service iptables restart</p></li> <li><p>查看状态
+iptables -L -n
+service iptables status
+iptables --list
+cat /etc/sysconfig/iptables
+iptables-save</p></li> <li><p>iptables 规则
+iptables -F
+iptables -X
+iptables -Z
+允许本地回环接口(即运行本机访问本机)
+iptables -A INPUT -s 127.0.0.1 -d 127.0.0.1 -j ACCEPT
+允许所有本机向外的访问
+iptables -A OUTPUT -j ACCEPT
+允许访问22端口
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+允许指定IP访问22
+iptables -I INPUT -s 192.168.0.19 -p tcp --dport 22 -j ACCEPT
+禁止其他未允许的规则访问
+iptables -A INPUT -j REJECT
+iptables -A FORWARD -j REJECT
+--dport为目标端口，当数据从外部进入服务器为目标端口；反之，数据从服务器出去则为数据源端口，使用 --sport
+s是指定源地址，-d是指定目标地址</p></li> <li><p>关闭所有的端口
+iptables -P INPUT DROP
+iptables -P OUTPUT DROP
+iptables -P FORWARD DROP</p></li> <li><p>禁Ping
+iptables -A INPUT -p icmp --icmp-type 8 -s 0/0 -j DROP
+允许Ping
+iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
+iptables -A OUTPUT -p icmp --icmp-type echo-reply -j ACCEPT</p></li> <li><p>iptables的表与链  iptables –&gt; tables –&gt; chains –&gt;rules
+iptables具有Filter，NAT，Mangle，Raw四种内建表</p></li> <li><p>iptales -A INPUT -p udp --sport 53 -j ACCEPT
+iptales -A OUTPUT -p udp --dport 53 -j ACCEPT
+iptales -A INPUT -p udp --dport 53 -j ACCEPT
+iptales -A OUTPUT -p udp --sport 53 -j ACCEPT</p></li></ol> <h3 id="关闭selinux防火墙"><a href="#关闭selinux防火墙" class="header-anchor">#</a> 关闭SELinux防火墙</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ vi /etc/sysconfig/selinux//编辑selinux文件
+SELINUX=disabled  //把文件中的SELINUX=enforcing 改成 SELINUX=disabled 即可
+sestatus          //查看SELinux状态
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>这时需要我们重启，再去查看SELinux防火墙的状态，可以看到已经关闭了</p> <h3 id="查看-修改主机名-更换源"><a href="#查看-修改主机名-更换源" class="header-anchor">#</a> 查看/修改主机名/更换源</h3> <ul><li><p>查看主机名</p></li> <li><p>hostnamectl静态主机名</p></li> <li><p>hostname瞬态主机名</p></li> <li><p>uname -a查看到的是瞬态的（Tansient hostname）</p></li> <li><p>cat /etc/redhat-release查看操作系统环境</p></li> <li><p>查看主机名配置文件，查看到的是静态的（Static hostname）cat /etc/hostname</p></li> <li><p>hostnamectl工具，只查看静态、瞬态或灵活主机名，分别使用--static，--transient或--pretty选项</p></li> <li><p>修改主机名</p></li></ul> <ol><li>hostname 主机名 //只能临时修改的主机名，当重启机器后，主机名称又变回来了。</li> <li>hostnamectl set-hostname  compute1 //永久性的修改主机名称，重启后能保持修改后的。</li> <li>hostnamectl set-hostname &quot;&quot; --static</li></ol> <ul><li>如果需要更换国内的镜像</li></ul> <ol><li>cd cd /etc/yum.repos.d/</li> <li>mv Centos-Base.repo.backup</li> <li>上传下载好的yum包，163，或aliyun都行</li> <li>改名字：mv Centos-Base-163.repo Centos-Base.repo</li> <li>yum clean all清理软件源</li> <li>yum makecache建立源数据缓存</li></ol> <p>注意：安装前为保险起见，先执行以下service network restart，要成功才行</p> <ul><li>下载新的CentOS-Base.repo 到/etc/yum.repos.d/
+mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>CentOS 5
+
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-5.repo
+或者
+
+curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-5.repo
+CentOS 6
+
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo
+或者
+
+curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo
+CentOS 7
+
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+或者
+
+curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h2 id="vim操作技巧"><a href="#vim操作技巧" class="header-anchor">#</a> vim操作技巧</h2></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:-50px;bottom:-70px;width:300px;height:600px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2dcanvas" width="300" height="600" class="live2dcanvas" style="position:absolute;left:0px;top:0px;width:300px;height:600px;"></canvas></div></div></div>
+    <script src="/assets/js/app.a9cac676.js" defer></script><script src="/assets/js/5.16132da4.js" defer></script><script src="/assets/js/1.ad84ba3d.js" defer></script><script src="/assets/js/30.e8d07abf.js" defer></script><script src="/assets/js/66.0eeb799b.js" defer></script>
+  </body>
+</html>

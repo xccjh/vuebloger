@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue踩坑记录 | 技术研究</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/img/logo.jpeg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.26f35423.css" as="style"><link rel="preload" href="/assets/js/app.a9cac676.js" as="script"><link rel="preload" href="/assets/js/5.16132da4.js" as="script"><link rel="preload" href="/assets/js/1.ad84ba3d.js" as="script"><link rel="preload" href="/assets/js/30.e8d07abf.js" as="script"><link rel="preload" href="/assets/js/82.24946372.js" as="script"><link rel="prefetch" href="/assets/js/10.5cea7d44.js"><link rel="prefetch" href="/assets/js/11.73d50b56.js"><link rel="prefetch" href="/assets/js/12.04d69aa9.js"><link rel="prefetch" href="/assets/js/13.704de73f.js"><link rel="prefetch" href="/assets/js/14.c1083114.js"><link rel="prefetch" href="/assets/js/15.17af6143.js"><link rel="prefetch" href="/assets/js/16.e7dd9a5b.js"><link rel="prefetch" href="/assets/js/17.11cf0530.js"><link rel="prefetch" href="/assets/js/18.d7b19b90.js"><link rel="prefetch" href="/assets/js/19.47575e85.js"><link rel="prefetch" href="/assets/js/20.4009a11c.js"><link rel="prefetch" href="/assets/js/21.2f887fcf.js"><link rel="prefetch" href="/assets/js/22.307d3c5e.js"><link rel="prefetch" href="/assets/js/23.5ccb9259.js"><link rel="prefetch" href="/assets/js/24.4946e399.js"><link rel="prefetch" href="/assets/js/25.ff697ec6.js"><link rel="prefetch" href="/assets/js/26.559af2ee.js"><link rel="prefetch" href="/assets/js/27.3a290674.js"><link rel="prefetch" href="/assets/js/28.828f4dd6.js"><link rel="prefetch" href="/assets/js/29.5cedb3c3.js"><link rel="prefetch" href="/assets/js/31.6db7bdc4.js"><link rel="prefetch" href="/assets/js/32.9bd3dab7.js"><link rel="prefetch" href="/assets/js/33.b9bed422.js"><link rel="prefetch" href="/assets/js/34.8c4ef4e2.js"><link rel="prefetch" href="/assets/js/35.cfed6d68.js"><link rel="prefetch" href="/assets/js/36.67695abd.js"><link rel="prefetch" href="/assets/js/37.383d6f5a.js"><link rel="prefetch" href="/assets/js/38.c612a4a3.js"><link rel="prefetch" href="/assets/js/39.5739bbc0.js"><link rel="prefetch" href="/assets/js/4.bab69199.js"><link rel="prefetch" href="/assets/js/40.3e9d4be1.js"><link rel="prefetch" href="/assets/js/41.466c1b69.js"><link rel="prefetch" href="/assets/js/42.0da03c58.js"><link rel="prefetch" href="/assets/js/43.0dfc9817.js"><link rel="prefetch" href="/assets/js/44.50c7c19b.js"><link rel="prefetch" href="/assets/js/45.75ddc72a.js"><link rel="prefetch" href="/assets/js/46.42fe5a76.js"><link rel="prefetch" href="/assets/js/47.ee518bde.js"><link rel="prefetch" href="/assets/js/48.aa76b66d.js"><link rel="prefetch" href="/assets/js/49.61a8038f.js"><link rel="prefetch" href="/assets/js/50.1cc0ea11.js"><link rel="prefetch" href="/assets/js/51.da780b83.js"><link rel="prefetch" href="/assets/js/52.ac2e9839.js"><link rel="prefetch" href="/assets/js/53.746b715d.js"><link rel="prefetch" href="/assets/js/54.195838f4.js"><link rel="prefetch" href="/assets/js/55.17477e6e.js"><link rel="prefetch" href="/assets/js/56.7790ae35.js"><link rel="prefetch" href="/assets/js/57.02e41136.js"><link rel="prefetch" href="/assets/js/58.6045c457.js"><link rel="prefetch" href="/assets/js/59.2cfc9728.js"><link rel="prefetch" href="/assets/js/6.06fb5c1c.js"><link rel="prefetch" href="/assets/js/60.03357dc0.js"><link rel="prefetch" href="/assets/js/61.62acbb0d.js"><link rel="prefetch" href="/assets/js/62.4ab96cc6.js"><link rel="prefetch" href="/assets/js/63.66c24936.js"><link rel="prefetch" href="/assets/js/64.deb96a21.js"><link rel="prefetch" href="/assets/js/65.2a3fe025.js"><link rel="prefetch" href="/assets/js/66.0eeb799b.js"><link rel="prefetch" href="/assets/js/67.a23737d7.js"><link rel="prefetch" href="/assets/js/68.5285b8bd.js"><link rel="prefetch" href="/assets/js/69.a947c62c.js"><link rel="prefetch" href="/assets/js/7.6af48b10.js"><link rel="prefetch" href="/assets/js/70.5b59c98c.js"><link rel="prefetch" href="/assets/js/71.8ddba1b1.js"><link rel="prefetch" href="/assets/js/72.a56e2af5.js"><link rel="prefetch" href="/assets/js/73.fc6e1561.js"><link rel="prefetch" href="/assets/js/74.8738216c.js"><link rel="prefetch" href="/assets/js/75.bfac855d.js"><link rel="prefetch" href="/assets/js/76.09554907.js"><link rel="prefetch" href="/assets/js/77.22028ab5.js"><link rel="prefetch" href="/assets/js/78.95a6cf25.js"><link rel="prefetch" href="/assets/js/79.21dfa375.js"><link rel="prefetch" href="/assets/js/8.896bcff0.js"><link rel="prefetch" href="/assets/js/80.311822ce.js"><link rel="prefetch" href="/assets/js/81.9d76043c.js"><link rel="prefetch" href="/assets/js/83.ee858c97.js"><link rel="prefetch" href="/assets/js/84.5e6d52eb.js"><link rel="prefetch" href="/assets/js/85.d90b86bd.js"><link rel="prefetch" href="/assets/js/86.ce2bef13.js"><link rel="prefetch" href="/assets/js/87.dca6f1d4.js"><link rel="prefetch" href="/assets/js/88.f87fe757.js"><link rel="prefetch" href="/assets/js/89.3f8c08b9.js"><link rel="prefetch" href="/assets/js/9.76076671.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.cdea39b0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.26f35423.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.jpeg" alt="技术研究" class="logo"> <span class="site-name can-hide">技术研究</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/timeLine/" class="nav-link">首页</a></div><div class="nav-item"><a href="/technology/" class="nav-link router-link-active">技术</a></div><div class="nav-item"><a href="/life/" class="nav-link">生活</a></div><div class="nav-item"><a href="/bake/" class="nav-link">备忘</a></div><div class="nav-item"><a href="/tags/" class="nav-link">标签库</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/massage/" class="nav-link">留言板</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">链接</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/xccjh/projects" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nextjs.frontendx.cn/docs/#%E5%AE%89%E8%A3%85" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nextjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://zh.nuxtjs.org/guide/installation" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nuxtjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://angularjs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AngularJS
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://reactnative.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ReactNative
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://element-cn.eleme.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ElementUI
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://youzan.github.io/vant/#/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vant
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://www.fontawesome.com.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Fontawesome
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://developers.weixin.qq.com/miniprogram/dev/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MiniProgram
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://reacttraining.com/react-router/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  react-router-dom
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://webpack.js.org/concepts/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  webpack
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.babeljs.cn/docs/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  babel
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://eslint.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  eslint
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.swiper.com.cn/api/index.html/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  swiper
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://momentjs.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  momentjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/linux/linux-shell.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  shell
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://lodash.com/docs/4.17.15#template" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  lodash
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://koa.bootcss.com/#links" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  koa
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://jestjs.io/docs/en/getting-started" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jest
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://aui.github.io/art-template/zh-cn/docs/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  art-template
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ejs.bootcss.com/#docs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ejs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.layui.com/doc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  layui
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://antv-g2.gitee.io/zh/examples/gallery" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  G2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.echartsjs.com/zh/option.html#title" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ECharts
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.vagrantup.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vagrant
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://docs.docker.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  docker
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/technology/ https://www.runoob.com/redis/redis-tutorial.html" class="nav-link">redis</a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/mysql/mysql-tutorial.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  mysql
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  leaflet
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.tslang.cn/docs/home.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  TypeScript
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://docschina.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  印记中文
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav> <div style="margin-left:20px;margin-right:20px;">
+    音乐
+    <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input"><!----><span class="el-switch__core" style="width:40px;"></span><!----></div> <audio><source src="/mp3/065b_520b_0409_111c898908eab454414c3c326fe77c36.mp3" type="audio/mpeg"></audio></div></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/timeLine/" class="nav-link">首页</a></div><div class="nav-item"><a href="/technology/" class="nav-link router-link-active">技术</a></div><div class="nav-item"><a href="/life/" class="nav-link">生活</a></div><div class="nav-item"><a href="/bake/" class="nav-link">备忘</a></div><div class="nav-item"><a href="/tags/" class="nav-link">标签库</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/massage/" class="nav-link">留言板</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">链接</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/xccjh/projects" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nextjs.frontendx.cn/docs/#%E5%AE%89%E8%A3%85" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nextjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://zh.nuxtjs.org/guide/installation" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nuxtjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://angularjs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AngularJS
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://reactnative.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ReactNative
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://element-cn.eleme.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ElementUI
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://youzan.github.io/vant/#/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vant
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://www.fontawesome.com.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Fontawesome
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://developers.weixin.qq.com/miniprogram/dev/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MiniProgram
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://reacttraining.com/react-router/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  react-router-dom
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://webpack.js.org/concepts/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  webpack
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.babeljs.cn/docs/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  babel
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://eslint.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  eslint
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.swiper.com.cn/api/index.html/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  swiper
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://momentjs.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  momentjs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/linux/linux-shell.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  shell
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://lodash.com/docs/4.17.15#template" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  lodash
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://koa.bootcss.com/#links" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  koa
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://jestjs.io/docs/en/getting-started" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jest
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://aui.github.io/art-template/zh-cn/docs/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  art-template
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ejs.bootcss.com/#docs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ejs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.layui.com/doc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  layui
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://antv-g2.gitee.io/zh/examples/gallery" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  G2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.echartsjs.com/zh/option.html#title" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ECharts
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.vagrantup.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vagrant
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://docs.docker.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  docker
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/technology/ https://www.runoob.com/redis/redis-tutorial.html" class="nav-link">redis</a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/mysql/mysql-tutorial.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  mysql
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  leaflet
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.tslang.cn/docs/home.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  TypeScript
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://docschina.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  印记中文
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>vue踩坑记录</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#父子created-mounte调用顺序" class="sidebar-link">父子created/mounte调用顺序</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#父子执行顺序" class="sidebar-link">父子执行顺序</a></li><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#多个子组件" class="sidebar-link">多个子组件</a></li></ul></li><li><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#vue数组对象的排序" class="sidebar-link">vue数组对象的排序</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#vue组件调试" class="sidebar-link">Vue组件调试</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#问题现象" class="sidebar-link">问题现象</a></li><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#解决办法" class="sidebar-link">解决办法</a></li></ul></li><li><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#vue响应式更新问题" class="sidebar-link">vue响应式更新问题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#vue响应式" class="sidebar-link">vue响应式</a></li><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#实例说明" class="sidebar-link">实例说明</a></li><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#vue-set" class="sidebar-link">Vue.set</a></li><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#数组变异的方式" class="sidebar-link">数组变异的方式</a></li><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#总结" class="sidebar-link">总结</a></li></ul></li><li><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#父组件异步数据传递props子组件" class="sidebar-link">父组件异步数据传递props子组件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#一、案例一" class="sidebar-link">一、案例一</a></li><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#二、案例二" class="sidebar-link">二、案例二</a></li><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#三、解决方法" class="sidebar-link">三、解决方法</a></li><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#_1-v-if" class="sidebar-link">1.v-if</a></li><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#_2-watch-methods" class="sidebar-link">2.watch+methods</a></li><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#_3-watch-computed-data" class="sidebar-link">3.watch+computed+data</a></li><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#_4-emit-on-bus" class="sidebar-link">4.emit+on+bus</a></li><li class="sidebar-sub-header"><a href="/technology/vue%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html#_5-prop-default" class="sidebar-link">5.prop/default+{{}}</a></li></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content__default"><h2 id="父子created-mounte调用顺序"><a href="#父子created-mounte调用顺序" class="header-anchor">#</a> 父子created/mounte调用顺序</h2> <h3 id="父子执行顺序"><a href="#父子执行顺序" class="header-anchor">#</a> 父子执行顺序</h3> <ol><li>父组件created</li> <li>子组件created</li> <li>子组件mounted</li> <li>父组件mounted</li></ol> <h3 id="多个子组件"><a href="#多个子组件" class="header-anchor">#</a> 多个子组件</h3> <ul><li>父组件created钩子结束后，依次执行子组件的created钩子</li> <li>多个子组件的created执行顺序为父组件内子组件DOM顺序</li> <li>多个子组件的mounted顺序无法保证，跟子组件本身复杂程度有关</li> <li>父组件一定在所有子组件结束mounted钩子之后，才会进入mounted钩子</li></ul> <h2 id="vue数组对象的排序"><a href="#vue数组对象的排序" class="header-anchor">#</a> vue数组对象的排序</h2> <p>如何对这个数组进行age排序呢</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>students:[
+    {name:'cjk',age:'38'} ,
+    { name:'xxf',age:'29'},
+    {name:'zk',age:'26'},
+]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>通常我们排序数组使用函数,vue中有问题</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">sortNumbers</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a<span class="token operator">-</span>b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>vue中要return出1或0才可以</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">sortByKey</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span>key</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> array<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">var</span> x <span class="token operator">=</span> a<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> y <span class="token operator">=</span> b<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token operator">&lt;</span>y<span class="token punctuation">)</span><span class="token operator">?</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">:</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token operator">&gt;</span>y<span class="token punctuation">)</span><span class="token operator">?</span><span class="token number">1</span><span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="vue组件调试"><a href="#vue组件调试" class="header-anchor">#</a> Vue组件调试</h2> <h3 id="问题现象"><a href="#问题现象" class="header-anchor">#</a> 问题现象</h3> <p>vue组件里调试,写下一个<code>debugger</code>,在运行时,也确实触发了断点,但显示的文件却不是我打断点的那个文件
+::: tip 温馨提示
+也就是说在vue组件里打断点,没有进入对应的文件. 触发了断点,但进入的文件却不是打断点的文件
+:::</p> <h3 id="解决办法"><a href="#解决办法" class="header-anchor">#</a> 解决办法</h3> <p>遇到调试组件时 打断点无法进入对应的文件,请检查调试的组件是否有重名的组件被加载,如果有修改文件名再试
+::: tip 温馨提示
+也就是说不用使用类似react的组件文件组织方式，在一个目录下命名index.vue,到处都是index.vue
+:::
+<img src="/img/post/Snipaste_2020-04-11_18-08-20.png" alt="vue组件调试" title="vue组件调试"> <center>vue组件调试</center></p> <h2 id="vue响应式更新问题"><a href="#vue响应式更新问题" class="header-anchor">#</a> vue响应式更新问题</h2> <h3 id="vue响应式"><a href="#vue响应式" class="header-anchor">#</a> vue响应式</h3> <p>在vue开发中会遇到data数据更改后view试图不会进行响应式更新的情况</p> <blockquote><p>不能检测到的数组变动是</p></blockquote> <ol><li>当利用索引直接设置一个项时，例如：<code>vm.items[indexOfItem] = newValue</code>；</li> <li>当修改数组的长度时，例如：<code>vm.items.length = newLength</code>；</li></ol> <blockquote><p>不能检测到的对象变动是</p></blockquote> <ol start="3"><li>向响应式对象添加属性；</li> <li>向响应式对象删除属性；</li></ol> <h3 id="实例说明"><a href="#实例说明" class="header-anchor">#</a> 实例说明</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div class=&quot;hello&quot;&gt;
+    &lt;div v-for=&quot;(item,index) in students&quot; :key=&quot;index&quot;&gt;
+      &lt;span&gt;姓名:{{item.name}} &lt;/span&gt; /
+      &lt;span&gt;年龄:{{item.age}}&lt;/span&gt; /
+      &lt;span&gt;索引:{{index}}&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;span v-for=&quot;(prop,index) in oneTeacher&quot; :key=&quot;index&quot;&gt; {{prop}} / &lt;/span&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&lt;button @click=&quot;changeArr()&quot;&gt;点击正常修改对象属性&lt;/button&gt;&lt;/p&gt;
+    &lt;p&gt;视图无响应：
+      &lt;button @click=&quot;indexChangeProp()&quot;&gt;点击使用索引修改数组内容&lt;/button&gt;
+      &lt;button @click=&quot;lengthChangeProp()&quot;&gt;点击更改对象length数组长度&lt;/button&gt;
+
+      &lt;button @click=&quot;addProp()&quot;&gt;点击向响应式对象添加属性&lt;/button&gt;
+      &lt;button @click=&quot;deleteProp()&quot;&gt;点击向响应式对象删除属性&lt;/button&gt;
+    &lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p&gt;对应解决方法：
+      &lt;button @click=&quot;changeArr()&quot;&gt;js完全替换掉数组&lt;/button&gt;
+      &lt;button @click=&quot;methodsChangeArr()&quot;&gt;使用JavaScript方法可以获取修改后返回的新数组&lt;/button&gt;
+
+      &lt;button @click=&quot;setChangeprop()&quot;&gt;使用vue的set方法向响应式对象添加属性&lt;/button&gt;
+      &lt;button @click=&quot;deletChangeprop()&quot;&gt;使用vue的delete方法向响应式对象删除属性&lt;/button&gt;
+      &lt;button @click=&quot;assignChangeprop()&quot;&gt;使用JS的Object.assign({},o1,o2)方法向对象添加属性&lt;/button&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App',
+      students:[
+        {name:&quot;张三&quot;,age:27},
+        {name:&quot;李四&quot;,age:29}
+      ],
+      oneTeacher:{name:&quot;诸葛孔明&quot;,age:1000}
+    }
+  },
+  methods:{
+    //该函数中直接进行了数组替换，大量数据处理时不合适
+    changeArr:function(){
+      let that=this;
+      that.students=[
+        {name:&quot;张三&quot;,age:18},
+        {name:&quot;李四&quot;,age:18}
+      ]
+    },
+
+    //根据索引修改数组对象,视图没有更新
+    indexChangeProp:function(){
+      let that=this;
+      that.students[0]={name:&quot;王五&quot;,age:33};
+      console.log(that.students);
+    },
+
+    //改变数组长度,视图没有更新
+    lengthChangeProp:function(){
+      let that=this;
+      that.students.length=5;
+      console.log(that.students);
+    },
+
+    //向响应式对象添加属性,视图没有更新
+    addProp:function(){
+      let that=this;
+      that.oneTeacher.studentNum=100;
+      console.log(that.oneTeacher);
+    },
+
+    //向响应式对象删除属性,视图没有更新
+    deleteProp:function(){
+      let that=this;
+      delete that.oneTeacher.age;
+      console.log(that.oneTeacher);
+    },
+
+    //使用JavaScript的数组方法获取返回的数组
+    methodsChangeArr:function(){
+      let that=this;
+      let newStudent={name:&quot;小乔&quot;,age:16};
+      that.students.push(newStudent);
+      console.log(that.students);
+    },
+
+    //使用vue的set方法向响应式对象添加属性
+    setChangeprop:function(){
+      let that=this;
+      that.$set(that.oneTeacher,&quot;studentNum&quot;,&quot;200个学生&quot;);
+      console.log(that.oneTeacher);
+    },
+
+    //使用vue的delete方法向响应式对象删除属性
+    deletChangeprop:function(){
+      let that=this;
+      that.$delete(that.oneTeacher,&quot;age&quot;);
+      console.log(that.oneTeacher);
+    },
+
+    //assign()方法合并多个对象返回新的对象进而达到添加对象属性的效果
+    assignChangeprop:function(){
+      let that=this,obj1,newObj;
+      obj1={sex:&quot;男&quot;};
+      //newObj=Object.assign(that.oneTeacher,obj1);  //无效，并未替换原有对象
+      newObj=Object.assign({},that.oneTeacher,obj1);
+      that.oneTeacher=newObj;
+      console.log(that.oneTeacher);
+
+    },
+
+  }
+}
+&lt;/script&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br></div></div><h3 id="vue-set"><a href="#vue-set" class="header-anchor">#</a> Vue.set</h3> <p><code>Vue.set( target, key, value)</code> ，set方法有下面3个参数</p> <ul><li><code>{Object | Array} target</code> -- 给谁设置值（对象，数组）都可以</li> <li><code>{string | number} key</code> -- 给对象设值，key 就是对象的key，给数组设值，key 就是数组的下标 index</li> <li><code>{any} value</code> -- 添加任何值都可以</li></ul> <h3 id="数组变异的方式"><a href="#数组变异的方式" class="header-anchor">#</a> 数组变异的方式</h3> <ul><li><code>push()</code>：将一个或多个元素添加到数组的末尾，并返回新数组的长度。</li> <li><code>pop()</code>：从数组中删除最后一个元素，并返回该元素的值。此方法更改数组的长度。</li> <li><code>shift()</code>：从数组中删除第一个元素，并返回该元素的值。</li> <li><code>unshift()</code>：将一个或多个元素添加到数组的开头，并返回新数组的长度。</li> <li><code>splice()</code>：通过删除现有元素和/或添加新元素来更改一个数组的内容。</li> <li><code>sort()</code>：用就地（ in-place ）的算法对数组的元素进行排序，并返回数组。 sort 排序不一定是稳定的。默认排序顺序是根据字符串Unicode码点。</li> <li><code>reverse()</code>：将数组中元素的位置颠倒。</li></ul> <h3 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h3> <ol><li>创建新的数组替换原有数组值</li> <li>使用JavaScript的数组操作函数，这些方法都会返回一个新数组，也是数组替换原理；</li> <li>使用vue自带的 <code>vue.set(object , key , value )</code>; 向响应式对象添加属性；</li> <li>使用vue自带的 <code>vue.delete(object , key )</code>; 向响应式对象删除属性；</li> <li>对象添加属性还可以使用<code>Object.assign({},obj1,obj2)</code>返回获取的新对象替换原有对象；</li></ol> <h2 id="父组件异步数据传递props子组件"><a href="#父组件异步数据传递props子组件" class="header-anchor">#</a> 父组件异步数据传递props子组件</h2> <h3 id="一、案例一"><a href="#一、案例一" class="header-anchor">#</a> 一、案例一</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>//parent.vue
+// asyncData为异步获取的数据，想传递给子组件使用
+&lt;template&gt;
+ &lt;div&gt;
+  父组件
+  &lt;child :child-data=&quot;asyncData&quot;&gt;&lt;/child&gt;
+ &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+ import child from './child'
+ export default {
+  data: () =&gt; ({
+   asyncData: ''
+  }),
+  components: {
+   child
+  },
+  created () {
+  },
+  mounted () {
+   // setTimeout模拟异步数据
+   setTimeout(() =&gt; {
+    this.asyncData = 'async data'
+    console.log('parent finish')
+   }, 2000)
+  }
+ }
+&lt;/script&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>//child.vue
+&lt;template&gt;
+ &lt;div&gt;
+  子组件{{childData}}
+ &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+ export default {
+  props: ['childData'],
+  data: () =&gt; ({
+  }),
+  created () {
+   console.log(this.childData) // 空值
+  },
+  methods: {
+  }
+ }
+&lt;/script&gt;
+//上面按照这里的解析，子组件的html中的`{{childData}}`的值会随着父组件的值而改变，但是created里面的却不会发生改变(生命周期问题)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h3 id="二、案例二"><a href="#二、案例二" class="header-anchor">#</a> 二、案例二</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>//parent.vue
+&lt;template&gt;
+ &lt;div&gt;
+  父组件
+  &lt;child :child-object=&quot;asyncObject&quot;&gt;&lt;/child&gt;
+ &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+ import child from './child'
+ export default {
+  data: () =&gt; ({
+   asyncObject: ''
+  }),
+  components: {
+   child
+  },
+  created () {
+  },
+  mounted () {
+   // setTimeout模拟异步数据
+   setTimeout(() =&gt; {
+    this.asyncObject = {'items': [1, 2, 3]}
+    console.log('parent finish')
+   }, 2000)
+  }
+ }
+&lt;/script&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>//child.vue
+&lt;template&gt;
+ &lt;div&gt;
+  子组件&lt;!--这里很常见的一个问题，就是{{childObject}}可以获取且没有报错，但是{{childObject.items[0]}}不行，往往有个疑问为什么前面获取到值，后面获取不到呢？--&gt;
+  &lt;p&gt;{{childObject.items[0]}}&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+ export default {
+  props: ['childObject'],
+  data: () =&gt; ({
+  }),
+  created () {
+   console.log(this.childObject) // 空值
+  },
+  methods: {
+  }
+ }
+&lt;/script&gt;
+
+//created里面的却不会发生改变， 子组件的html中的{{childObject.items[0]}}的值虽然会随着父组件的值而改变，但是过程中会报错
+首先传过来的是空，然后在异步刷新值，也开始时候childObject.items[0]等同于''.item[0]这样的操作，所以就会报下面的错
+vue.esm.js?8910:434 [Vue warn]: Error in render function:
+&quot;TypeError: Cannot read property '0' of undefined&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h3 id="三、解决方法"><a href="#三、解决方法" class="header-anchor">#</a> 三、解决方法</h3> <h3 id="_1-v-if"><a href="#_1-v-if" class="header-anchor">#</a> 1.v-if</h3> <p>使用v-if可以解决报错问题，和created为空问题</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//parent.vue
+&lt;template&gt;
+ &lt;div&gt;
+  父组件
+  &lt;child :child-object=&quot;asyncObject&quot; v-if=&quot;flag&quot;&gt;&lt;/child&gt;
+ &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+ import child from './child'
+ export default {
+  data: () =&gt; ({
+   asyncObject: '',
+   flag: false
+  }),
+  components: {
+   child
+  },
+  created () {
+  },
+  mounted () {
+   // setTimeout模拟异步数据
+   setTimeout(() =&gt; {
+    this.asyncObject = {'items': [1, 2, 3]}
+    this.flag = true
+    console.log('parent finish')
+   }, 2000)
+  }
+ }
+&lt;/script&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>//child.vue
+&lt;template&gt;
+ &lt;div&gt;
+  子组件//不报错
+  &lt;p&gt;{{childObject.items[0]}}&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+ export default {
+  props: ['childObject'],
+  data: () =&gt; ({
+  }),
+  created () {
+   console.log(this.childObject)// Object {items: [1,2,3]}
+  },
+  methods: {
+  }
+ }
+&lt;/script&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h3 id="_2-watch-methods"><a href="#_2-watch-methods" class="header-anchor">#</a> 2.watch+methods</h3> <p>子组件使用watch来监听父组件改变的prop，使用methods来代替created</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//child.vue
+&lt;template&gt;
+ &lt;div&gt;
+  我就是子组件
+  &lt;p&gt;{{test}}&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+ export default {
+  props: ['childObject'],
+  data: () =&gt; ({
+   test: ''
+  }),
+  watch: {
+   'childObject.items': function (n, o) {
+    this.test = n[0]
+    this.updata()
+   }
+  },
+  methods: {
+   updata () { // 既然created只会执行一次，但是又想监听改变的值做其他事情的话，搬到这里调用
+    console.log(this.test)// 1
+   }
+  }
+ }
+&lt;/script&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h3 id="_3-watch-computed-data"><a href="#_3-watch-computed-data" class="header-anchor">#</a> 3.watch+computed+data</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>//child.vue
+&lt;template&gt;
+ &lt;div&gt;
+  我就是子组件
+  &lt;p&gt;{{test}}&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+ export default {
+  props: ['childObject'],
+  data: () =&gt; ({
+   test: ''
+  }),
+  watch: {
+   'childObject.items': function (n, o) {
+    this._test = n[0]
+   }
+  },
+  computed: {
+   _test: {
+    set (value) {
+     this.update()//值更改自动调用
+     this.test = value
+    },
+    get () {
+     return this.test
+    }
+   }
+  },
+  methods: {
+   update () {
+    console.log(this.childObject) // {items: [1,2,3]}
+   }
+  }
+ }
+&lt;/script&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div><h3 id="_4-emit-on-bus"><a href="#_4-emit-on-bus" class="header-anchor">#</a> 4.emit+on+bus</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>//child
+&lt;template&gt;
+ &lt;div&gt;
+  子组件
+  &lt;p&gt;{{test}}&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+ export default {
+  props: ['childObject'],
+  data: () =&gt; ({
+   test: ''
+  }),
+  created () {
+   // 绑定，让父亲恰当时间触发即可
+   this.$bus.on('triggerChild', (parmas) =&gt; {
+    this.test = parmas.items[0] // 1
+    this.updata()
+   })
+  },
+  methods: {
+   updata () {
+    console.log(this.test) // 1
+   }
+  }
+ }
+&lt;/script&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><h3 id="_5-prop-default"><a href="#_5-prop-default" class="header-anchor">#</a> 5.prop/default+{{}}</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>//parent.vue
+&lt;template&gt;
+ &lt;div&gt;
+  父组件
+  &lt;child :child-object=&quot;asyncObject&quot;&gt;&lt;/child&gt;
+ &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+ import child from './child'
+ export default {
+  data: () =&gt; ({
+   asyncObject: undefined // 这里使用null反而报0的错
+  }),
+  components: {
+   child
+  },
+  created () {
+  },
+  mounted () {
+   // setTimeout模拟异步数据
+   setTimeout(() =&gt; {
+    this.asyncObject = {'items': [1, 2, 3]}
+    console.log('parent finish')
+   }, 2000)
+  }
+ }
+&lt;/script&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>//child.vue
+&lt;template&gt;
+ &lt;div&gt;
+  子组件&lt;!--1--&gt;
+  &lt;p&gt;{{childObject.items[0]}}&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+ export default {
+  props: {
+   childObject: {
+    type: Object,
+    default () {
+     return {
+      items: ''
+     }
+    }
+   }
+  },
+  data: () =&gt; ({
+  }),
+  created () {
+   console.log(this.childObject) // {item: ''}
+  }
+ }
+&lt;/script&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:-50px;bottom:-70px;width:300px;height:600px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2dcanvas" width="300" height="600" class="live2dcanvas" style="position:absolute;left:0px;top:0px;width:300px;height:600px;"></canvas></div></div></div>
+    <script src="/assets/js/app.a9cac676.js" defer></script><script src="/assets/js/5.16132da4.js" defer></script><script src="/assets/js/1.ad84ba3d.js" defer></script><script src="/assets/js/30.e8d07abf.js" defer></script><script src="/assets/js/82.24946372.js" defer></script>
+  </body>
+</html>
